@@ -19,7 +19,7 @@ function App() {
 
         <Section id='video' className='section2' backgroundColor={theme.palette.tertiary.main}>
           {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', height: "200%", overflow: 'hidden', width: '100%'}}>
-            <iframe 
+            <iframe sd
               // width="560" 
               // height="315" 
               width="100%"
