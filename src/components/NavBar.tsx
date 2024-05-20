@@ -1,7 +1,7 @@
 import { AppBar, Box, IconButton, Menu, MenuItem, Toolbar} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
-import { Facebook, Instagram, YouTube} from "@mui/icons-material";
+import { Album, Facebook, Group, Home, Instagram, Mail, Mic, PlayCircle, YouTube} from "@mui/icons-material";
 
 
 const NavBar = () => {
@@ -83,22 +83,22 @@ const NavBar = () => {
                   onClose={handleClose}
                 >
                   <MenuItem onClick={() => handleClose2('home')}>
-                      Home
+                      <Home sx={{paddingRight: "10%"}} /> Home
                   </MenuItem>
                   <MenuItem onClick={() => handleClose2('video')}>
-                      Video
+                    <PlayCircle sx={{paddingRight: "10%"}} /> Video
                   </MenuItem>
                   <MenuItem onClick={() => handleClose2('auftritte')}>
-                      Auftritte
+                   <Mic sx={{paddingRight: "10%"}} /> Auftritte
                   </MenuItem>
                   <MenuItem onClick={() => handleClose2('alben')}>
-                      Alben
+                    <Album sx={{paddingRight: "10%"}} /> Alben
                   </MenuItem>
                   <MenuItem onClick={() => handleClose2('ueberUns')}>
-                      Über Uns
+                    <Group sx={{paddingRight: "10%"}} /> Über Uns
                   </MenuItem>
                   <MenuItem onClick={() => handleClose2('kontakt')}>
-                      Kontakt
+                    <Mail sx={{paddingRight: "10%"}} /> Kontakt
                   </MenuItem>
                 </Menu>
         </Toolbar>

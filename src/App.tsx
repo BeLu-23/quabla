@@ -4,7 +4,6 @@ import theme from './components/theme'
 import Section from './components/Section'
 import NavBar from './components/NavBar'
 import { Facebook, Instagram, YouTube } from '@mui/icons-material'
-// import NavBar from './components/NavBar'
 
 function App() {
 
@@ -33,7 +32,7 @@ function App() {
               allowfullscreen>
             </iframe>
           </Box> */}
-          <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>
+          {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>
             <Box sx={{ 
               position: 'relative', 
               // paddingBottom: '56.25%', 
@@ -69,7 +68,23 @@ function App() {
                 }}
               ></iframe>
             </Box>
-          </Box>
+          </Box> */}
+
+<div className="video-container">
+    <div className="video-wrapper">
+      <iframe 
+        className='videowrapper'
+        src="https://www.youtube.com/embed/OyokKLWtczA" 
+        title="YouTube video player" 
+        frameBorder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowFullScreen>
+      </iframe>
+    </div>
+  </div>
+
+
+
         </Section>
 
         <Section id='auftritte' className='section3' backgroundColor={theme.palette.secondary.main}>
