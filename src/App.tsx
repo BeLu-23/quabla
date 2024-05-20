@@ -70,19 +70,21 @@ function App() {
             </Box>
           </Box> */}
 
-<div className="video-container">
+{/* <div className="video-container">
     <div className="video-wrapper">
       <iframe 
         className='videowrapper'
-        src="https://www.youtube.com/embed/OyokKLWtczA" 
+        src="https://www.youtube-nocookie.com/embed/OyokKLWtczA?si=_nQmWrlqC7pxoCHE" 
         title="YouTube video player" 
+        loading="lazy"
         frameBorder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowFullScreen>
       </iframe>
     </div>
-  </div>
+  </div> */}
 
+          Video
 
 
         </Section>
