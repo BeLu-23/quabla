@@ -11,7 +11,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
 
-      <div className='App' style={{borderColor: 'red', borderWidth: '2px', borderStyle: 'solid', borderRadius: 2}}>
+      <div className='App'>
 
         <NavBar />
 
