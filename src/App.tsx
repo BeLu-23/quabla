@@ -2,12 +2,16 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import Auftritte from './components/Auftritte'
+import Home from './components/Home'
+import NavBar from './components/NavBar'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
+      <NavBar />
       <div>
         Here will soon be the new Website of the super famous german Band called
         <br />
@@ -17,6 +21,8 @@ function App() {
         <br />
         Check out <a href="https://www.youtube.com/@quablamusic" target="_blank">YouTube</a>
       </div>
+      <Home />
+      <Auftritte id="section"/>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

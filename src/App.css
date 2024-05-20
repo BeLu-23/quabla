@@ -47,3 +47,18 @@
   /* color: aquamarine; */
   font-weight: bold;
 }
+
+/* #section {
+  padding: 60px 20px;
+  min-height: 100vh;
+} */
+
+/* .home-section {
+  height: 100vh;
+  background-image: url('path_to_your_background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
