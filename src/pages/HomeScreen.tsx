@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import NavBar from "../components/NavBar";
 import Section from "../components/Section";
 import theme from "../components/theme";
@@ -12,74 +12,28 @@ const HomeScreen = () => {
 
         <Section id='home' className='section1' backgroundImage='Titelbild-Webpage-temp.png' />
 
-        <Section id='video' className='section2' backgroundColor={theme.palette.tertiary.main}>
-          {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative', height: "200%", overflow: 'hidden', width: '100%'}}>
-            <iframe sd
-              // width="560" 
-              // height="315" 
+        <Section id='video' className='section2' backgroundColor={theme.palette.tertiary.main}
+        
+        >
+          
+        <Container sx={{width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+          
+          <Typography variant="h5" component="h1" color={"secondary"}>
+            Hör dir unsere Musik an...
+          </Typography>
+          <br />
+            <iframe 
               width="100%"
               height="100%" 
-              src="https://www.youtube.com/embed/OyokKLWtczA?si=lBXrCvu0uFruAXhk" 
+              src="https://www.youtube-nocookie.com/embed/OyokKLWtczA?si=lBXrCvu0uFruAXhk" 
               title="YouTube video player" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen>
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+                >
             </iframe>
-          </Box> */}
-          {/* <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%' }}>
-            <Box sx={{ 
-              position: 'relative', 
-              // paddingBottom: '56.25%', 
-              width: '40%', 
-              height: "80%",
-              padding: 0,
-                  margin: 0,
-              borderWidth: '2px',
-              borderColor: 'red',
-              borderStyle: 'solid'
-              }}>
-              <iframe 
-                src="https://www.youtube.com/embed/OyokKLWtczA?si=lBXrCvu0uFruAXhk" 
-                title="YouTube video player" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen
-                style={{
-                  // position: 'absolute',
-                  // top: 0,
-                  // left: 0,
-                  width: '120%',
-                  padding: 0,
-                  margin: 0,
-                  // height: '100%',
-                  borderWidth: '2px',
-                  // display: 'flex',
-                  // alignItems: 'center',
-                  // justifyContent: 'center',
-                  borderColor: 'red',
-                  borderStyle: 'solid'
-                }}
-              ></iframe>
-            </Box>
-          </Box> */}
-
-{/* <div className="video-container">
-    <div className="video-wrapper">
-      <iframe 
-        className='videowrapper'
-        src="https://www.youtube-nocookie.com/embed/OyokKLWtczA?si=_nQmWrlqC7pxoCHE" 
-        title="YouTube video player" 
-        loading="lazy"
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowFullScreen>
-      </iframe>
-    </div>
-  </div> */}
-
-          Video
+        </Container>
 
 
         </Section>
