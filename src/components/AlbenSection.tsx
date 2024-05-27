@@ -4,9 +4,25 @@ import theme from "./theme";
 
 const AlbenSection = () => {
   return (
-    <Section id='alben' className='section4' backgroundColor={theme.palette.tertiary.main}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 4 }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{ color: theme.palette.secondary.main }}>
+    <Section 
+        id='alben'
+        backgroundColor={theme.palette.tertiary.main}
+    >
+        <Box sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            textAlign: 'center'
+        }}>
+            <Typography 
+                variant="h4" 
+                component="h2" 
+                gutterBottom 
+                sx={{ 
+                    color: theme.palette.secondary.main, 
+                    mt: 2 
+                }}
+            >
                 Unser Album
             </Typography>
             <Card 
@@ -31,13 +47,31 @@ const AlbenSection = () => {
                         objectPosition: 'center',
                     }}
                 />
-                <CardContent sx={{ backgroundColor: theme.palette.secondary.main }}>
-                    <Typography variant="h5" component="div" gutterBottom sx={{ color: theme.palette.primary.main }}>
+                <CardContent 
+                    sx={{ 
+                        backgroundColor: theme.palette.secondary.main 
+                    }}
+                >
+                    <Typography 
+                        variant="h5" 
+                        component="div" 
+                        gutterBottom 
+                        sx={{ 
+                            color: theme.palette.primary.main 
+                        }}
+                    >
                         Bogisland
                     </Typography>
-                    <Typography variant="body1" component="div" sx={{ color: theme.palette.primary.main }}>
+                    <Typography 
+                        variant="body1" 
+                        component="div" 
+                        sx={{ 
+                            color: theme.palette.primary.main 
+                        }}
+                    >
                         Check unser erstes Album aus. Hier noch unter einem anderen Namen, aber die selbe Mukke.
-                        <br /><br />
+                        <br />
+                        <br />
                         Jetzt auf Spotify verfügbar!
                     </Typography>
                 </CardContent>

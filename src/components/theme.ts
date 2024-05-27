@@ -1,7 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 
-// color: rgba(255, 255, 255, 0.87);
-//   background-color: #242424;
 declare module '@mui/material/styles' {
     interface Palette {
       tertiary: Palette['primary'];

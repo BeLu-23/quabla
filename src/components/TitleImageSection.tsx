@@ -2,7 +2,10 @@ import Section from "./Section";
 
 const TitleImageSection = () => {
     return (
-        <Section id='home' className='section1' backgroundImage='/quabla/Quabla_Title_Dummy2.jpg' />
+        <Section 
+            id='home' 
+            backgroundImage='/quabla/Quabla_Title_Dummy2.jpg' 
+        />
         );
 }
  

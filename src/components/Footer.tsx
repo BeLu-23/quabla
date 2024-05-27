@@ -6,19 +6,22 @@ import theme from "./theme";
 const Footer = () => {
 
     return ( 
-        <Box className='impressum'
-             sx={{
-                 backgroundColor: theme.palette.secondary.main,
-                 color: theme.palette.primary.main,
-                 display: 'flex',
-                 flexDirection: 'column',
-                 alignItems: 'center',
-                 padding: 2,
-                 textAlign: 'center'
-             }}>
+        <Box
+            sx={{
+                backgroundColor: theme.palette.secondary.main,
+                color: theme.palette.primary.main,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                padding: 2,
+                textAlign: 'center'
+            }}>
 
-            {/* Social Media Links */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 2 }}>
+            <Box sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                marginBottom: 2 
+            }}>
                 <IconButton
                     size="large"
                     color="inherit"
@@ -48,22 +51,49 @@ const Footer = () => {
                 </IconButton>
             </Box>
 
-            {/* Impressum und Datenschutz Links */}
-            <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 2 }}>
-                <Typography component="span" sx={{ cursor: 'pointer', textDecoration: 'underline', marginRight: 2 }}>
-                    <Link component={RouterLink} to="/impressum/" color="inherit">
+            <Box sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                marginBottom: 2 
+            }}>
+                <Typography 
+                    component="span" 
+                    sx={{ 
+                        cursor: 'pointer', 
+                        textDecoration: 'underline', 
+                        marginRight: 2 
+                    }}
+                >
+                    <Link 
+                        component={RouterLink} 
+                        to="/impressum/" 
+                        color="inherit"
+                    >
                         Impressum
                     </Link>
                 </Typography>
-                <Typography component="span" sx={{ cursor: 'pointer', textDecoration: 'underline' }}>
-                    <Link component={RouterLink} to="/datenschutz/" color="inherit">
+                <Typography 
+                    component="span" 
+                    sx={{ 
+                        cursor: 'pointer', 
+                        textDecoration: 'underline' 
+                    }}
+                >
+                    <Link 
+                        component={RouterLink} 
+                        to="/datenschutz/" 
+                        color="inherit"
+                    >
                         Datenschutz
                     </Link>
                 </Typography>
             </Box>
 
-            {/* Copyright */}
-            <Typography sx={{ marginTop: 2 }}>
+            <Typography 
+                sx={{ 
+                    marginTop: 2 
+                }}
+            >
                 © {new Date().getFullYear()} Quabla. Alle Rechte vorbehalten.
             </Typography>
         </Box>

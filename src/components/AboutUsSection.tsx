@@ -4,9 +4,17 @@ import theme from "./theme";
 
 const AboutUsSection = () => {
     return (
-        <Section id='ueberUns' className='section4' backgroundColor={theme.palette.secondary.main}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 4 }}>
-                <Typography variant="h4" component="h2" gutterBottom sx={{ color: theme.palette.primary.main }}>
+        <Section 
+            id='ueberUns'
+            backgroundColor={theme.palette.secondary.main}
+        >
+            <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                alignItems: 'center', 
+                textAlign: 'center' 
+            }}>
+                <Typography variant="h4" component="h2" gutterBottom sx={{ color: theme.palette.primary.main, mt: 2 }}>
                     Über Uns
                 </Typography>
                 <Card sx={{ maxWidth: 600, margin: 2, width: '100%' }}>

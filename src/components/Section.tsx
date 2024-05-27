@@ -5,12 +5,11 @@ import { Box} from "@mui/material";
 interface SectionProps {
     id: string;
     children?: React.ReactNode;
-    className?: string;
     backgroundImage?: string;
     backgroundColor?: string;
 }
 
-const Section = ({id,children, className, backgroundImage, backgroundColor}: SectionProps) => {
+const Section = ({id,children, backgroundImage, backgroundColor}: SectionProps) => {
 
     const sectionStyle = backgroundImage
     ? { 
@@ -18,17 +17,23 @@ const Section = ({id,children, className, backgroundImage, backgroundColor}: Sec
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
         backgroundRepeat: 'no-repeat',
+        height: '100vh',
     }
-    : { backgroundColor: backgroundColor || 'transparent' };
+    : { 
+        backgroundColor: backgroundColor || 'transparent', 
+        height: 'auto' 
+    };
     
     return ( 
         <Box 
             id={id}
-            sx={{ ...sectionStyle, backgroundColor: backgroundColor || 'transparent', height: '100vh', width: '100vw', paddingTop: '64px',
-            //  borderStyle: 'solid', borderWidth: 2, borderColor: 'red' 
+            sx={{ 
+                ...sectionStyle, 
+                backgroundColor: backgroundColor || 'transparent', 
+                width: '100vw', paddingTop: '64px',
+                paddingBottom: 2
             }}
-            className={`section ${className}`} 
-            >
+        >
             {children}
         </Box>
      );
