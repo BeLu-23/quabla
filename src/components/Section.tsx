@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css';
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
 
 interface SectionProps {
     id: string;
@@ -17,7 +17,7 @@ const Section = ({id,children, className, backgroundImage, backgroundColor}: Sec
         backgroundImage: `url(${backgroundImage})`, 
         backgroundSize: 'cover', 
         backgroundPosition: 'center', 
-        backgroundRepeat: 'no-repeat'  
+        backgroundRepeat: 'no-repeat',
     }
     : { backgroundColor: backgroundColor || 'transparent' };
     
