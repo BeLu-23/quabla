@@ -11,9 +11,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-        <BrowserRouter>
+        <BrowserRouter basename="/quabla">
           <Routes>
-            <Route path='/quabla/' Component={HomeScreen} />
+            <Route path='/' Component={HomeScreen} />
             <Route path='/impressum/' Component={Impressum} />
             <Route path='/datenschutz/' Component={Datenschutz} />
           </Routes>

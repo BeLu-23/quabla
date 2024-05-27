@@ -24,7 +24,9 @@ const Section = ({id,children, className, backgroundImage, backgroundColor}: Sec
     return ( 
         <Box 
             id={id}
-            sx={{ ...sectionStyle, backgroundColor: backgroundColor || 'transparent', height: '100vh', width: '100vw' }}
+            sx={{ ...sectionStyle, backgroundColor: backgroundColor || 'transparent', height: '100vh', width: '100vw', paddingTop: '64px',
+            //  borderStyle: 'solid', borderWidth: 2, borderColor: 'red' 
+            }}
             className={`section ${className}`} 
             >
             {children}

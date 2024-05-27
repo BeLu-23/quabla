@@ -17,9 +17,12 @@ html, body, #root {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
   padding: 0;
   overflow: hidden;  /* Ensure no overflow */
+  /* padding-top: 64px; Gleiche Höhe wie die Navbar */
 }
 .section1 {
   /* background-image: url('./assets/Titelbild-Webpage-temp.png');

@@ -27,7 +27,6 @@ const AboutUsSection = () => {
                         </Typography>
                         <Typography variant="body1" component="div" sx={{ color: theme.palette.primary.main }}>
                             Wir sind eine leidenschaftliche Band aus [Stadt], die sich der Musik verschrieben hat. Unsere Reise begann im Jahr [Jahr], und seitdem haben wir zahlreiche Auftritte und Alben veröffentlicht.
-                            Wir sind eine leidenschaftliche Band aus [Stadt], die sich der Musik verschrieben hat. Unsere Reise begann im Jahr [Jahr], und seitdem haben wir zahlreiche Auftritte und Alben veröffentlicht.
                             <br /><br />
                             Unser Stil ist vielseitig und reicht von [Genre 1] bis [Genre 2]. Jedes Bandmitglied bringt seine einzigartige Erfahrung und Leidenschaft in die Gruppe ein, was unsere Musik so besonders macht.
                             <br /><br />
