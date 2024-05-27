@@ -29,7 +29,6 @@ const Impressum = () => {
                     Kontakt
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    {/* Telefon: +49 (0) 176 86965979<br /> */}
                     E-Mail: tonesforjoansbones@gmail.com<br />
                 </Typography>
             </Box>
