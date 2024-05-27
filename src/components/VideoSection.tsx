@@ -9,7 +9,9 @@ const VideoSection = () => {
     }
 
     return ( 
-      <Section id='video' className='section1' backgroundColor={theme.palette.tertiary.main}>
+      <Section 
+        id='videoALT' 
+        className='section1' backgroundColor={theme.palette.tertiary.main}>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: 4 }}>
             <Typography variant="h4" component="h2" gutterBottom sx={{ color: theme.palette.secondary.main,
               //  borderStyle: 'solid', borderWidth: 2, borderColor: 'red' 
