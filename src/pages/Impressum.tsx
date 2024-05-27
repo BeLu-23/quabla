@@ -18,9 +18,9 @@ const Impressum = () => {
                     Angaben gemäß § 5 TMG
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Benjamin Lutz<br />
-                    Heideweg 15<br />
-                    22085 Hamburg<br />
+                    Bela Wiener<br />
+                    Harburger Chaussee 107<br />
+                    20539 Hamburg<br />
                 </Typography>
             </Box>
 
@@ -29,19 +29,8 @@ const Impressum = () => {
                     Kontakt
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Telefon: +49 (0) 176 86965979<br />
+                    {/* Telefon: +49 (0) 176 86965979<br /> */}
                     E-Mail: tonesforjoansbones@gmail.com<br />
-                </Typography>
-            </Box>
-
-            <Box mb={4}>
-                <Typography variant="h5" component="h2" gutterBottom>
-                    Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
-                </Typography>
-                <Typography variant="body1" paragraph>
-                    Benjamin Lutz<br />
-                    Heideweg 15<br />
-                    22085 Hamburg<br />
                 </Typography>
             </Box>
 
