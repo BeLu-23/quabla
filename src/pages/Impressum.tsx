@@ -18,9 +18,9 @@ const Impressum = () => {
                     Angaben gemäß § 5 TMG
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Bela Wiener<br />
-                    Harburger Chaussee 107<br />
-                    20539 Hamburg<br />
+                    Benjamin Lutz<br />
+                    Hintere Gasse 31<br />
+                    70794 Filderstadt<br />
                 </Typography>
             </Box>
 
