@@ -13,9 +13,9 @@ function App() {
       <CssBaseline />
         <BrowserRouter>
           <Routes>
-            <Route path='/' Component={HomeScreen} />
-            <Route path='/impressum' Component={Impressum} />
-            <Route path='/datenschutz' Component={Datenschutz} />
+            <Route path='/quabla/' Component={HomeScreen} />
+            <Route path='/impressum/' Component={Impressum} />
+            <Route path='/datenschutz/' Component={Datenschutz} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>

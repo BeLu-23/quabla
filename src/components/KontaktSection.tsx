@@ -12,7 +12,7 @@ const KontaktSection = () => {
                 <Card sx={{ maxWidth: 600, margin: 2, width: '100%' }}>
                     <CardMedia
                         component="img"
-                        image='kontaktPic.jpg'
+                        image='/quabla/kontaktPic.jpg'
                         alt="Über Uns"
                         sx={{
                             height: 'auto',

@@ -22,7 +22,7 @@ const AlbenSection = () => {
             >
                 <CardMedia
                     component="img"
-                    image="albumPic.jpg"
+                    image="/quabla/albumPic.jpg"
                     alt="Album Cover"
                     sx={{
                         height: 'auto',

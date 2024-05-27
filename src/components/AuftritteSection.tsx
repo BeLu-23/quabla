@@ -58,7 +58,7 @@ const AuftritteSection = () => {
                 <Card sx={{ maxWidth: 600, margin: 2, width: '100%', boxShadow: 'none', background: 'inherit' }}>
                     <CardMedia
                         component="img"
-                        image="ssf_2024_1.png"
+                        image="/quabla/ssf_2024_1.png"
                         alt="Kommender Auftritt"
                         sx={{
                             height: 'auto',

@@ -12,7 +12,7 @@ const AboutUsSection = () => {
                 <Card sx={{ maxWidth: 600, margin: 2, width: '100%' }}>
                     <CardMedia
                         component="img"
-                        image='aboutUsPic.jpg'
+                        image='/quabla/aboutUsPic.jpg'
                         alt="Über Uns"
                         sx={{
                             height: 'auto',
