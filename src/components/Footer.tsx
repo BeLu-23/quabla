@@ -4,6 +4,7 @@ import { Link as RouterLink} from 'react-router-dom'
 import theme from "./theme";
 
 const Footer = () => {
+
     return ( 
         <Box className='impressum'
              sx={{
@@ -50,12 +51,12 @@ const Footer = () => {
             {/* Impressum und Datenschutz Links */}
             <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: 2 }}>
                 <Typography component="span" sx={{ cursor: 'pointer', textDecoration: 'underline', marginRight: 2 }}>
-                    <Link component={RouterLink} to="/impressum" color="inherit">
+                    <Link component={RouterLink} to="/impressum/" color="inherit">
                         Impressum
                     </Link>
                 </Typography>
                 <Typography component="span" sx={{ cursor: 'pointer', textDecoration: 'underline' }}>
-                    <Link component={RouterLink} to="/datenschutz" color="inherit">
+                    <Link component={RouterLink} to="/datenschutz/" color="inherit">
                         Datenschutz
                     </Link>
                 </Typography>

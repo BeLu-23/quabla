@@ -4,7 +4,7 @@ import theme from './components/theme'
 import HomeScreen from './pages/HomeScreen'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Impressum from './pages/Impressum'
-import Datenschutz from './pages/datenschutz'
+import Datenschutz from './pages/Datenschutz'
 
 function App() {
 

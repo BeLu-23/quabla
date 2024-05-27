@@ -23,7 +23,6 @@ const VideoSection = () => {
                     width: '100%', 
                     boxShadow: 'none', 
                     background: 'inherit',
-                    // cursor: 'pointer',
                     // borderStyle: 'solid', borderWidth: 2, borderColor: 'yellow'
                 }}
             >

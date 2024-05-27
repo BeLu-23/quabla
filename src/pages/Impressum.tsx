@@ -1,8 +1,14 @@
 import { Box, Container, Typography } from "@mui/material";
+import { useEffect } from "react";
 
 const Impressum = () => {
+    
+    useEffect(() => {
+        document.getElementById("imprOBEN")?.scrollIntoView({ behavior: 'smooth' })
+      }, []);
+
     return ( 
-        <Container maxWidth="md" sx={{ padding: 4 }}>
+        <Container id="imprOBEN" maxWidth="md" sx={{ padding: 4 }}>
             <Typography variant="h4" component="h1" gutterBottom>
                 Impressum
             </Typography>
