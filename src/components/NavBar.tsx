@@ -26,7 +26,7 @@ const NavBar = () => {
 
                   <NavIcons 
                       flexGrow={1} 
-                      fontSize="large" 
+                      fontSize="medium" 
                   />
                   <NavMenu />
 

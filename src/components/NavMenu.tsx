@@ -28,7 +28,9 @@ const NavMenu = () => {
                 sx={{ mr: 2 }}
                 onClick={handleMenu}
             >
-                <MenuIcon fontSize="large" />
+                <MenuIcon 
+                    // fontSize="large" 
+                />
             </IconButton>
         
             <Menu
