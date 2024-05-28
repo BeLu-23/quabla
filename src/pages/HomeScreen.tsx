@@ -50,7 +50,7 @@ const HomeScreen = () => {
 
   return (
     <div>
-      <NavBar />
+      <NavBar getWindowSizeInfo={getWindowSizeInfo} />
       <TitleImageSection />
       <YouTubeEmbed
         videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"

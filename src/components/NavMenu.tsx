@@ -4,7 +4,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { header } from "../utility/header";
 import React from "react";
 
-const NavMenu = () => {
+interface NavMenuProps {
+    isSmallWindow: boolean;
+}
+
+const NavMenu = ({isSmallWindow}: NavMenuProps) => {
 
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement >(null);
 
@@ -19,13 +23,15 @@ const NavMenu = () => {
 
     return (
         <>
-
             <IconButton
                 size="large"
                 edge="end"
                 color="secondary"
                 aria-label="menu"
-                sx={{ mr: 2 }}
+                sx={{ 
+                    mr: isSmallWindow ? 3 : 2, 
+                    mt: isSmallWindow ? 1 : 0,
+                }}
                 onClick={handleMenu}
             >
                 <MenuIcon 

@@ -6,15 +6,20 @@ interface NavIconsProps {
     marginBottom?: number;
     justifyContent?: string;
     fontSize?: "medium" | "small" | "inherit" | "large";
+    isSmallWindow: boolean;
 }
 
-const NavIcons = ({ flexGrow, marginBottom, justifyContent, fontSize}: NavIconsProps) => {
+const NavIcons = ({ flexGrow, marginBottom, justifyContent, fontSize
+    , isSmallWindow
+}: NavIconsProps) => {
 
     const iconFontSize = fontSize ? fontSize : "medium";
     const navIconsStyle = { 
         flexGrow: flexGrow,
         marginBottom: marginBottom,
         justifyContent: justifyContent,
+        marginTop: isSmallWindow ? 1 : 0,
+        marginLeft: isSmallWindow ? 1 : 0,
     }
     
     return ( 
@@ -22,6 +27,8 @@ const NavIcons = ({ flexGrow, marginBottom, justifyContent, fontSize}: NavIconsP
             sx={{
                 display: 'flex',
                 ...navIconsStyle,
+                // padding: 20,
+                // margin: 3,
             }}
         >
             <IconButton

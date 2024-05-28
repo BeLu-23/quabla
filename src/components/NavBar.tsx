@@ -2,8 +2,20 @@ import { AppBar, Box, Toolbar} from "@mui/material";
 import NavMenu from "./NavMenu";
 import NavIcons from "./NavIcons";
 
+interface NavBarProps {
+  getWindowSizeInfo: () => {
+    isLargeWindow: boolean;
+    isMediumWindow: boolean;
+    isSmallWindow: boolean;
+    size: string;
+  };
+}
 
-const NavBar = () => {
+const NavBar = (
+  {getWindowSizeInfo}: NavBarProps
+) => {
+
+    const windowInfo = getWindowSizeInfo();
 
     return ( 
         <Box 
@@ -27,8 +39,9 @@ const NavBar = () => {
                   <NavIcons 
                       flexGrow={1} 
                       fontSize="medium" 
+                      isSmallWindow={windowInfo.isSmallWindow}
                   />
-                  <NavMenu />
+                  <NavMenu isSmallWindow={windowInfo.isSmallWindow} />
 
                 </Toolbar>
             </AppBar>
