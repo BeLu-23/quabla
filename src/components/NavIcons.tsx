@@ -6,7 +6,7 @@ interface NavIconsProps {
     marginBottom?: number;
     justifyContent?: string;
     fontSize?: "medium" | "small" | "inherit" | "large";
-    isSmallWindow: boolean;
+    isSmallWindow?: boolean;
 }
 
 const NavIcons = ({ flexGrow, marginBottom, justifyContent, fontSize
