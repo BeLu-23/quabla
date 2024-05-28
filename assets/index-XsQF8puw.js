@@ -159,12 +159,10 @@ Error generating stack: `+i.message+`
               Du hättest dabei sein können. Aber es gibt bestimmt ein nächstes Mal.
               Schau doch mal bei unseren 
               <a
+              style="color: {color}; cursor: pointer; text-decoration: underline;"
               onclick="document.getElementById('{section}')?.scrollIntoView({ behavior: 'smooth' }); return false;"
-              style="color: {color}; cursor: pointer; textDecoration: underline;"
               >
-                kommenden Auftritten
-              </a>
-              !
+                kommenden Auftritten</a>.
             `},gigs:{header:"Sternstunden Festival an der Sternwarte in Bergedorf",subtitle:"Datum: 20. Juli 2024 <br /> Zeit: 12.30 Uhr",content:`Unsere Band wird live auf dem Festival auftreten! Kommt und genießt 
         eine unvergessliche Nacht voller Musik und guter Stimmung. Wir freuen uns 
         darauf, euch alle dort zu sehen! Tickets gibts 
