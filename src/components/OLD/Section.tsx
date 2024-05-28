@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css';
+import '../../App.css';
 import { Box} from "@mui/material";
 
 interface SectionProps {
@@ -31,7 +31,6 @@ const Section = ({id,children, backgroundImage, backgroundColor}: SectionProps) 
                 ...sectionStyle, 
                 backgroundColor: backgroundColor || 'transparent', 
                 width: '100vw', paddingTop: '64px',
-                paddingBottom: 2
             }}
         >
             {children}

@@ -2,6 +2,7 @@ import { AppBar, Box, IconButton, Menu, MenuItem, Toolbar} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
 import { Album, Facebook, Group, Home, Instagram, Mail, Mic, PlayCircle, YouTube} from "@mui/icons-material";
+import { header } from "../utility/header";
 
 
 const NavBar = () => {
@@ -12,11 +13,7 @@ const NavBar = () => {
         setAnchorEl(event.currentTarget);
     }
 
-    const handleClose = () => {
-        setAnchorEl(null);
-    }
-
-    const handleClose2 = (section: string) => {
+    const handleClose = (section: string) => {
       setAnchorEl(null);
       document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
   }
@@ -52,7 +49,7 @@ const NavBar = () => {
                           href="https://www.facebook.com/quablaband"
                           target="_blank"
                         >
-                          <Facebook />
+                          <Facebook fontSize="large" />
                         </IconButton>
                         <IconButton
                           size="large"
@@ -61,7 +58,7 @@ const NavBar = () => {
                           href="https://www.instagram.com/quabla_band/"
                           target="_blank"
                         >
-                          <Instagram/>
+                          <Instagram fontSize="large" />
                         </IconButton>
                         <IconButton
                           size="large"
@@ -70,7 +67,7 @@ const NavBar = () => {
                           href="https://www.youtube.com/channel/UCzAPef7M6fuDDJbktj-YJIg"
                           target="_blank"
                         >
-                          <YouTube/>
+                          <YouTube fontSize="large" />
                         </IconButton>
                     </Box>
 
@@ -82,7 +79,7 @@ const NavBar = () => {
                         sx={{ mr: 2 }}
                         onClick={handleMenu}
                       >
-                        <MenuIcon />
+                        <MenuIcon fontSize="large" />
                       </IconButton>
 
                     <Menu
@@ -100,23 +97,23 @@ const NavBar = () => {
                       open={Boolean(anchorEl)}
                       onClose={handleClose}
                     >
-                      <MenuItem onClick={() => handleClose2('home')}>
-                          <Home sx={{paddingRight: "10%"}} /> Home
+                      <MenuItem onClick={() => handleClose(header.home)}>
+                          <Home fontSize="large" sx={{pr: "10%"}} /> {header.home}
                       </MenuItem>
-                      <MenuItem onClick={() => handleClose2('video')}>
-                        <PlayCircle sx={{paddingRight: "10%"}} /> Video
+                      <MenuItem onClick={() => handleClose(header.video)}>
+                        <PlayCircle fontSize="large" sx={{pr: "10%"}} /> {header.video}
                       </MenuItem>
-                      <MenuItem onClick={() => handleClose2('auftritte')}>
-                      <Mic sx={{paddingRight: "10%"}} /> Auftritte
+                      <MenuItem onClick={() => handleClose(header.gigs)}>
+                      <Mic fontSize="large" sx={{pr: "10%"}} /> {header.gigs}
                       </MenuItem>
-                      <MenuItem onClick={() => handleClose2('alben')}>
-                        <Album sx={{paddingRight: "10%"}} /> Alben
+                      <MenuItem onClick={() => handleClose(header.recordings)}>
+                        <Album fontSize="large" sx={{pr: "10%"}} /> {header.recordings}
                       </MenuItem>
-                      <MenuItem onClick={() => handleClose2('ueberUns')}>
-                        <Group sx={{paddingRight: "10%"}} /> Über Uns
+                      <MenuItem onClick={() => handleClose(header.aboutUs)}>
+                        <Group fontSize="large" sx={{pr: "10%"}} /> {header.aboutUs}
                       </MenuItem>
-                      <MenuItem onClick={() => handleClose2('kontakt')}>
-                        <Mail sx={{paddingRight: "10%"}} /> Kontakt
+                      <MenuItem onClick={() => handleClose(header.contact)}>
+                        <Mail fontSize="large" sx={{pr: "10%"}} /> {header.contact}
                       </MenuItem>
                     </Menu>
                 </Toolbar>
