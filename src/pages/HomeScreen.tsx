@@ -7,7 +7,7 @@ import RespSection from "../components/RespSection";
 import { header } from "../utility/header";
 
 const HomeScreen = () => {
-  
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [secNumbers, setSecNumbers] = useState([2, 3, 4, 5, 6]);
 
@@ -29,10 +29,10 @@ const HomeScreen = () => {
   };
 
   const updateArray = () => {
-    if (getWindowSizeInfo().isLargeWindow) {
-      setSecNumbers([2, 3, 4, 5, 6]);
-    } else {
+    if (getWindowSizeInfo().isSmallWindow) {
       setSecNumbers([1, 2, 3, 4, 5]);
+    } else {
+      setSecNumbers([2, 3, 4, 5, 6]);
     }
   };
 
