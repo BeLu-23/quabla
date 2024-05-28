@@ -14,12 +14,10 @@ export const contentStrings: ContentStrings = {
               Du hättest dabei sein können. Aber es gibt bestimmt ein nächstes Mal.
               Schau doch mal bei unseren 
               <a
+              style="color: {color}; cursor: pointer; text-decoration: underline;"
               onclick="document.getElementById('{section}')?.scrollIntoView({ behavior: 'smooth' }); return false;"
-              style="color: {color}; cursor: pointer; textDecoration: underline;"
               >
-                kommenden Auftritten
-              </a>
-              !
+                kommenden Auftritten</a>.
             `,
         },
     gigs: {
