@@ -1,7 +1,7 @@
-import { Facebook, Instagram, YouTube } from "@mui/icons-material";
-import { Box, IconButton, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import theme from "../utility/theme";
+import NavIcons from "./NavIcons";
 
 interface FooterProps {
   isSmallWindow: boolean;
@@ -22,41 +22,7 @@ const Footer = ({isSmallWindow}: FooterProps) => {
         textAlign: "center",
       }}
     >
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: 2,
-        }}
-      >
-        <IconButton
-          size="large"
-          color="inherit"
-          aria-label="facebook"
-          href="https://www.facebook.com/quablaband"
-          target="_blank"
-        >
-          <Facebook />
-        </IconButton>
-        <IconButton
-          size="large"
-          color="inherit"
-          aria-label="instagram"
-          href="https://www.instagram.com/quabla_band/"
-          target="_blank"
-        >
-          <Instagram />
-        </IconButton>
-        <IconButton
-          size="large"
-          color="inherit"
-          aria-label="youtube"
-          href="https://www.youtube.com/channel/UCzAPef7M6fuDDJbktj-YJIg"
-          target="_blank"
-        >
-          <YouTube />
-        </IconButton>
-      </Box>
+      <NavIcons justifyContent="center" marginBottom={2} />
 
       <Box
         sx={{
