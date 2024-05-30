@@ -196,7 +196,7 @@ Error generating stack: `+i.message+`
         <br />
         <br />
         E-Mail: <a
-        href="mailto:tonesforjoansbones@gmail.com"
+        href="mailto:contact@quabla-band.com"
         style="color: {color};" }}
         >
         contact@quabla-band.com
