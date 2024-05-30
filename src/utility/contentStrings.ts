@@ -23,8 +23,8 @@ export const contentStrings: ContentStrings = {
     gigs: {
         header: 'Sternstunden Festival an der Sternwarte in Bergedorf',
         subtitle: 'Datum: 20. Juli 2024 <br /> Zeit: 12.30 Uhr',
-        content: `Unsere Band wird live auf dem Festival auftreten! Kommt und genießt 
-        eine unvergessliche Nacht voller Musik und guter Stimmung. Wir freuen uns 
+        content: `Unsere Band wird live auf dem Sternstunden Festival auftreten! Kommt vorbei und bereitet euch auf 
+        tolle Musik und gute Stimmung vor. Wir freuen uns 
         darauf, euch alle dort zu sehen! Tickets gibts 
         <a
         href="https://www.sternstundenfestival.de/tickets"
@@ -49,19 +49,17 @@ export const contentStrings: ContentStrings = {
         header: 'Unsere Band',
         subtitle: null,
         content: `
-        Wir sind eine leidenschaftliche Band aus [Stadt], die sich der
-        Musik verschrieben hat. Unsere Reise begann im Jahr [Jahr], und
-        seitdem haben wir zahlreiche Auftritte und Alben veröffentlicht.
+        Quabla ist eine Band aus Hamburg, die eine einzigartige Mischung aus Jazz-Einflüssen, 
+        Rock und experimenteller Musik schafft. Der Stil ist geprägt von einer Fusion aus sanften 
+        Jazzharmonien mit der Intensität und Energie des Rock, ergänzt durch atmosphärische und manchmal 
+        psychedelische Elemente. 
+        <br />
+        Von introspektiv und ruhig bis hin zu lebhaft und rhythmisch werden verschiedene 
+        Genres nahtlos miteinander verbunden, sodass ein frisches und überzeugendes Hörerlebnis geschaffen wird. 
         <br />
         <br />
-        Unser Stil ist vielseitig und reicht von [Genre 1] bis [Genre 2].
-        Jedes Bandmitglied bringt seine einzigartige Erfahrung und
-        Leidenschaft in die Gruppe ein, was unsere Musik so besonders
-        macht.
-        <br />
-        <br />
-        Wir freuen uns darauf, euch bei unseren kommenden Auftritten zu
-        sehen und mit euch unvergessliche Momente zu teilen.
+        Wenn du Musik magst, die Grenzen überschreitet und gerne auch mal unkonventionell daherkommt, freuen wir 
+        uns auf dich als Zuhörer/-in!
         `,
     },
     contact: {

@@ -1,6 +1,7 @@
 import { AppBar, Box, Toolbar} from "@mui/material";
 import NavMenu from "./NavMenu";
 import NavIcons from "./NavIcons";
+import theme from "../utility/theme";
 
 interface NavBarProps {
   getWindowSizeInfo: () => {
@@ -26,7 +27,7 @@ const NavBar = (
             <AppBar 
               position="fixed" 
               sx={{
-                backgroundColor: "#48C6A9", 
+                backgroundColor: theme.palette.info.main, 
                 height: '64px'
               }}
             >
