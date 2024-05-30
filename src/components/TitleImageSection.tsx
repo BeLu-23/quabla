@@ -18,98 +18,98 @@ const TitleImageSection = () => {
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP0.jpg)`,
+          backgroundImage: `url(/TP0.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/kontaktPic.jpg)`,
+          backgroundImage: `url(/kontaktPic.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP1.jpg)`,
+          backgroundImage: `url(/TP1.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP2.jpg)`,
+          backgroundImage: `url(/TP2.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP3.jpg)`,
+          backgroundImage: `url(/TP3.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP4.jpg)`,
+          backgroundImage: `url(/TP4.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP5.jpg)`,
+          backgroundImage: `url(/TP5.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP6.jpg)`,
+          backgroundImage: `url(/TP6.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP8.jpg)`,
+          backgroundImage: `url(/TP8.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP9.jpg)`,
+          backgroundImage: `url(/TP9.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP10.jpg)`,
+          backgroundImage: `url(/TP10.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP11.jpg)`,
+          backgroundImage: `url(/TP11.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP12.jpg)`,
+          backgroundImage: `url(/TP12.jpg)`,
           ...sectionStyle,
         }}
       />
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/quabla/TP13.jpg)`,
+          backgroundImage: `url(/TP13.jpg)`,
           ...sectionStyle,
         }}
       />

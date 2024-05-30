@@ -10,7 +10,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename="/quabla">
+      <BrowserRouter basename="/">
         <Routes>
           <Route path="/" Component={HomeScreen} />
           <Route path="/impressum/" Component={Impressum} />

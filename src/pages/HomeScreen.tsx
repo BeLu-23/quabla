@@ -58,25 +58,25 @@ const HomeScreen = () => {
       />
       <RespSection
         headerValue={header.gigs}
-        imageUrl="/quabla/ssf_2024_1.png"
+        imageUrl="/ssf_2024_1.png"
         secNumber={secNumbers[0]}
         getWindowSizeInfo={getWindowSizeInfo}
       />
       <RespSection
         headerValue={header.recordings}
-        imageUrl="/quabla/albumPic.jpg"
+        imageUrl="/albumPic.jpg"
         secNumber={secNumbers[1]}
         getWindowSizeInfo={getWindowSizeInfo}
       />
       <RespSection
         headerValue={header.aboutUs}
-        imageUrl="/quabla/aboutUsPic.jpg"
+        imageUrl="/aboutUsPic.jpg"
         secNumber={secNumbers[2]}
         getWindowSizeInfo={getWindowSizeInfo}
       />
       <RespSection
         headerValue={header.contact}
-        imageUrl="/quabla/kontaktPic2.jpg"
+        imageUrl="/kontaktPic2.jpg"
         secNumber={secNumbers[3]}
         getWindowSizeInfo={getWindowSizeInfo}
       />
