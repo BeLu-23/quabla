@@ -71,10 +71,10 @@ export const contentStrings: ContentStrings = {
         <br />
         <br />
         E-Mail: <a
-        href="mailto:tonesforjoansbones@gmail.com"
+        href="mailto:contact@quabla-band.com"
         style="color: {color};" }}
         >
-        tonesforjoansbones@gmail.com
+        contact@quabla-band.com
         </a>
         <br />
         <br />
