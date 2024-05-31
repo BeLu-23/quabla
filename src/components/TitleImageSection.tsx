@@ -1,9 +1,20 @@
 import { Box } from "@mui/material";
 import { header } from "../utility/header";
 
-const TitleImageSection = () => {
+interface TitleImageSectionProps {
+  getWindowSizeInfo: () => {
+      isLargeWindow: boolean;
+      isMediumWindow: boolean;
+      isSmallWindow: boolean;
+      size: string;
+    };
+}
+
+const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
+
+  const windowSizeInfo = getWindowSizeInfo();
   const sectionStyle = {
-    // backgroundImage: `url(/quabla/Quabla_Title_Dummy2.jpg)`,
+    backgroundImage: windowSizeInfo.isLargeWindow ? `url(/title-large.jpg)` : windowSizeInfo.isMediumWindow ? `url(/title-medium.jpg)` : `url(/title-small.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -14,106 +25,12 @@ const TitleImageSection = () => {
   };
 
   return (
-    <>
       <Box
         id={header.home}
         sx={{
-          backgroundImage: `url(/TP0.jpg)`,
           ...sectionStyle,
         }}
       />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/kontaktPic.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP1.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP2.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP3.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP4.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP5.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP6.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP8.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP9.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP10.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP11.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP12.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-      <Box
-        id={header.home}
-        sx={{
-          backgroundImage: `url(/TP13.jpg)`,
-          ...sectionStyle,
-        }}
-      />
-    </>
   );
 };
 

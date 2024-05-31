@@ -14,8 +14,8 @@ const HomeScreen = () => {
   const getWindowSizeInfo = () => {
     const sizeInfo = {
       isLargeWindow: windowWidth >= 1600,
-      isMediumWindow: windowWidth >= 600 && windowWidth < 1600,
-      isSmallWindow: windowWidth < 600,
+      isMediumWindow: windowWidth >= 650 && windowWidth < 1600,
+      isSmallWindow: windowWidth < 650,
     };
 
     let size = "large";
@@ -51,7 +51,7 @@ const HomeScreen = () => {
   return (
     <div>
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />
-      <TitleImageSection />
+      <TitleImageSection getWindowSizeInfo={getWindowSizeInfo} />
       <YouTubeEmbed
         videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"
         getWindowSizeInfo={getWindowSizeInfo}
