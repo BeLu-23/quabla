@@ -29,7 +29,7 @@ const Impressum = () => {
                     Kontakt
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    E-Mail: tonesforjoansbones@gmail.com<br />
+                    E-Mail: contact@quabla-band.com<br />
                 </Typography>
             </Box>
 
