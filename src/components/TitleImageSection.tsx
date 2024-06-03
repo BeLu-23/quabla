@@ -30,9 +30,9 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
     small: ["/title-small-1.jpg", "/title-small-2.jpg", "/title-small-3.jpg", "/title-small-4.jpg"],
   };
 
-  const selectedImages = windowSizeInfo.isLargeWindow
-    ? images.large
-    : images.small;
+  const selectedImages = windowSizeInfo.isSmallWindow
+    ? images.small
+    : images.large;
 
   return (
     <Box
