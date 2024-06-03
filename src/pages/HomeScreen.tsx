@@ -76,7 +76,7 @@ const HomeScreen = () => {
       />
       <RespSection
         headerValue={header.contact}
-        imageUrl="/kontaktPic2.jpg"
+        imageUrl="/kontaktPic2-compressed.jpg"
         secNumber={secNumbers[3]}
         getWindowSizeInfo={getWindowSizeInfo}
       />

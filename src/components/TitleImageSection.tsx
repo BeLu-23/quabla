@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import { header } from "../utility/header";
 import Carousel from "react-material-ui-carousel";
+import theme from "../utility/theme";
 
 interface TitleImageSectionProps {
   getWindowSizeInfo: () => {
@@ -14,20 +15,10 @@ interface TitleImageSectionProps {
 const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
 
   const windowSizeInfo = getWindowSizeInfo();
-  // const sectionStyle = {
-  //   backgroundImage: windowSizeInfo.isLargeWindow ? `url(/title-large.jpg)` : windowSizeInfo.isMediumWindow ? `url(/title-medium.jpg)` : `url(/title-small.jpg)`,
-  //   backgroundSize: "cover",
-  //   backgroundPosition: "center",
-  //   backgroundRepeat: "no-repeat",
-  //   height: "100vh",
-  //   backgroundColor: "transparent",
-  //   width: "100vw",
-  //   pt: "64px",
-  // };
 
   const images = {
-    large: ["/title-large-1.jpg", "/title-large-2.jpg", "/title-large-3.jpg"],
-    small: ["/title-small-1.jpg", "/title-small-2.jpg", "/title-small-3.jpg", "/title-small-4.jpg"],
+    large: ["/title-large-1-compressed.jpg", "/title-large-2-compressed.jpg", "/title-large-3-compressed.jpg"],
+    small: ["/title-small-1-compressed.jpg", "/title-small-2-compressed.jpg", "/title-small-3-compressed.jpg", "/title-small-4-compressed.jpg"],
   };
 
   const selectedImages = windowSizeInfo.isSmallWindow
@@ -38,11 +29,10 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
     <Box
       id={header.home}
       sx={{
-        // height: "100vh",
         height: "calc(100vh - 64px)",
         width: "100vw",
-        // pt: "64px",
-        mb: "64px",
+        pt: "64px",
+        backgroundColor: theme.palette.tertiary.main,
       }}
     >
       <Carousel
@@ -52,7 +42,6 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
         indicators={false}
         navButtonsAlwaysVisible={true}
         fullHeightHover={false}
-        // timeout={5000}
       >
         {selectedImages.map((image, index) => (
           <Box
@@ -62,7 +51,7 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              height: "100vh",
+              height: "calc(100vh - 64px)",
               width: "100vw",
             }}
           />
