@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
-import { header } from "../utility/otherContent";
 import Carousel from "react-material-ui-carousel";
 import theme from "../utility/theme";
+import { header } from "../utility/contentStrings";
 
 interface TitleImageSectionProps {
   getWindowSizeInfo: () => {

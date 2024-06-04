@@ -1,7 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import theme from "../utility/theme";
-import { header } from "../utility/otherContent";
-import { contentStrings } from "../utility/contentStrings";
+import { contentStrings, header } from "../utility/contentStrings";
 
 interface RespSectionProps {
     headerValue: string;

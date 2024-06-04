@@ -1,8 +1,8 @@
 import { Album, Group, Home, Mail, Mic, PlayCircle } from "@mui/icons-material";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { header } from "../utility/otherContent";
 import React from "react";
+import { header } from "../utility/contentStrings";
 
 interface NavMenuProps {
     isSmallWindow: boolean;

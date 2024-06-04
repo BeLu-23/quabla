@@ -4,9 +4,9 @@ import TitleImageSection from "../components/TitleImageSection";
 import YouTubeEmbed from "../components/YouTubeEmbed";
 import { useEffect, useState } from "react";
 import RespSection from "../components/RespSection";
-import { header } from "../utility/otherContent";
 import { useCookies } from "react-cookie";
 import CookieConsent from "../components/CookieConsent";
+import { header } from "../utility/contentStrings";
 
 const HomeScreen = () => {
 

@@ -2,7 +2,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import React from "react";
 import theme from "../utility/theme";
 import { Link as RouterLink } from "react-router-dom";
-import { cookieBannerString } from "../utility/otherContent";
+import { cookieBannerString } from "../utility/contentStrings";
 
 interface CookieConsentProps {
     giveCookieConsent: () => void;

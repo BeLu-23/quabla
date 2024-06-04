@@ -1,8 +1,7 @@
 import Box from "@mui/material/Box";
 import theme from "../utility/theme";
 import { Button, Typography, Link as MuiLink } from "@mui/material";
-import { header, noVideoStrings } from "../utility/otherContent";
-import { contentStrings } from "../utility/contentStrings";
+import { contentStrings, header, noVideoStrings } from "../utility/contentStrings";
 
 interface YouTubeEmbedProps {
   videoId: string;
