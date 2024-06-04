@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import theme from "../utility/theme";
-import { header } from "../utility/contentStrings";
+import { header, titlePageButton } from "../utility/contentStrings";
 
 interface TitleImageSectionProps {
   getWindowSizeInfo: () => {
@@ -25,6 +25,10 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
     ? images.small
     : images.large;
 
+  const handleClick = (section: string) => {
+    document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   return (
     <Box
       id={header.home}
@@ -33,8 +37,81 @@ const TitleImageSection = ({getWindowSizeInfo}: TitleImageSectionProps) => {
         width: "100vw",
         pt: "64px",
         backgroundColor: theme.palette.tertiary.main,
+        position: "relative",
       }}
     >
+      <Box 
+        sx={{
+          position: "absolute",
+          zIndex: 10,
+          bottom: '-30px',
+          left: "50%",
+          transform: "translateX(-50%)",
+          alignItems: 'center',
+          display: 'flex',
+          flexDirection: 'column'
+        }}
+      >
+      <Button 
+          onClick={() => {handleClick(header.recordings)}} 
+          sx={{
+              border: '3px solid',
+              color: theme.palette.tertiary.main,
+              backgroundColor: theme.palette.primary.main,
+              mb: '10px',
+              padding: { xs: '6px 12px', sm: '8px 18px', md: '8px 18px' },
+              '&:hover': {
+                backgroundColor: theme.palette.tertiary.main,
+                color: theme.palette.primary.main,
+              },
+              '&:active': {
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.tertiary.main,
+              },
+          }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: '14px', sm: '16px', md: '16px' },
+          }}
+        >
+          {titlePageButton.recordings}
+        </Typography>
+      </Button>
+
+      <Button 
+          onClick={() => {handleClick(header.video)}} 
+          sx={{
+              border: '3px solid',
+              color: theme.palette.tertiary.main,
+              backgroundColor: theme.palette.primary.main,
+              padding: { xs: '6px 12px', sm: '8px 18px', md: '8px 18px' },
+              '&:hover': {
+                backgroundColor: theme.palette.tertiary.main,
+                color: theme.palette.primary.main,
+              },
+              '&:active': {
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.tertiary.main,
+              },
+          }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "bold",
+            fontSize: { xs: '14px', sm: '16px', md: '16px' },
+          }}
+        >
+          {titlePageButton.video}
+        </Typography>
+      </Button>
+
+
+      </Box>
+      
       <Carousel
         autoPlay={true}
         interval={3500}

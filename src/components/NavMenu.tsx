@@ -19,7 +19,7 @@ const NavMenu = ({isSmallWindow}: NavMenuProps) => {
     const handleClose = (section: string) => {
       setAnchorEl(null);
       document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
-  }
+    }
 
     return (
         <>

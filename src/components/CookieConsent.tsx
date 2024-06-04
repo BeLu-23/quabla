@@ -43,17 +43,17 @@ const CookieConsent = ({giveCookieConsent}: CookieConsentProps) => {
         </DialogContent>
         <DialogActions>
             <Button 
-                    onClick={() => {handleClose(cookieBannerString.disagree)}} 
-                    sx={{
-                        backgroundColor: theme.palette.secondary.main,
-                    }}
+                onClick={() => {handleClose(cookieBannerString.disagree)}} 
+                sx={{
+                    backgroundColor: theme.palette.secondary.main,
+                }}
             >{cookieBannerString.disagree}
             </Button>
             <Button 
-                    onClick={() => {handleClose(cookieBannerString.agree)}} 
-                    sx={{
-                        backgroundColor: theme.palette.secondary.main,
-                    }}
+                onClick={() => {handleClose(cookieBannerString.agree)}} 
+                sx={{
+                    backgroundColor: theme.palette.secondary.main,
+                }}
             >{cookieBannerString.agree}
             </Button>
         </DialogActions>

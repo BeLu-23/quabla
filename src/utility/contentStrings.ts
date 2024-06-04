@@ -122,3 +122,8 @@ export const noVideoStrings = {
     askForCookies: 'Möchtest du doch die Cookies akzeptieren?',
     agree: 'Nur notwendige Cookies akzeptieren',
 }
+
+export const titlePageButton = {
+    recordings: 'Zur Musik',
+    video: 'Zum Video',
+}
