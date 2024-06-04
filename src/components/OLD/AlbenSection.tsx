@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import Section from "./Section";
 import theme from "../../utility/theme";
-import { header } from "../../utility/header";
+import { header } from "../../utility/otherContent";
 
 const AlbenSection = () => {
   return (

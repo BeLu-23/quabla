@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Typography, Box } from "@mui/material";
 import Section from "./Section";
 import theme from "../../utility/theme";
 import { useEffect, useState } from "react";
-import { header } from "../../utility/header";
+import { header } from "../../utility/otherContent";
 
 const AuftritteSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);

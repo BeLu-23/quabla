@@ -4,12 +4,20 @@ import TitleImageSection from "../components/TitleImageSection";
 import YouTubeEmbed from "../components/YouTubeEmbed";
 import { useEffect, useState } from "react";
 import RespSection from "../components/RespSection";
-import { header } from "../utility/header";
+import { header } from "../utility/otherContent";
+import { useCookies } from "react-cookie";
+import CookieConsent from "../components/CookieConsent";
 
 const HomeScreen = () => {
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [secNumbers, setSecNumbers] = useState([2, 3, 4, 5, 6]);
+
+  const [cookies, setCookies] = useCookies(["cookieConsent"]);
+
+  const giveCookieConsent = () => {
+      setCookies("cookieConsent", true, {path: "/"});
+  }
 
   const getWindowSizeInfo = () => {
     const sizeInfo = {
@@ -50,11 +58,14 @@ const HomeScreen = () => {
 
   return (
     <div>
+      {!cookies.cookieConsent && <CookieConsent giveCookieConsent={giveCookieConsent} />}
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />
       <TitleImageSection getWindowSizeInfo={getWindowSizeInfo} />
       <YouTubeEmbed
         videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"
         getWindowSizeInfo={getWindowSizeInfo}
+        giveCookieConsent={giveCookieConsent}
+        cookie={cookies}
       />
       <RespSection
         headerValue={header.gigs}

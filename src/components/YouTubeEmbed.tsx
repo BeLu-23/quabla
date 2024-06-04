@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import theme from "../utility/theme";
-import { Typography } from "@mui/material";
-import { header } from "../utility/header";
+import { Button, Typography, Link as MuiLink } from "@mui/material";
+import { header, noVideoStrings } from "../utility/otherContent";
 import { contentStrings } from "../utility/contentStrings";
 
 interface YouTubeEmbedProps {
@@ -12,13 +12,18 @@ interface YouTubeEmbedProps {
     isSmallWindow: boolean;
     size: string;
   };
+  giveCookieConsent: () => void;
+  cookie: {
+    cookieConsent?: boolean;
+  };
 }
 
-const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo }) => {
+const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo, giveCookieConsent, cookie }) => {
 
   const primary = theme.palette.primary.main;
   const secondary = theme.palette.secondary.main;
   const tertiary = theme.palette.tertiary.main;
+  const warning = theme.palette.warning.main;
 
   const generateHtmlContent = (content: string, color: string): string => {
     return content.replace('{color}', color)
@@ -67,20 +72,63 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo 
           borderTopLeftRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
         }}
       >
-        <iframe
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}
-          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          title="YouTube video"
-        />
+        {cookie.cookieConsent ? (
+          <iframe
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+            }}
+            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="YouTube video"
+          />
+          ) : (
+            <Box sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: warning, 
+              padding: 3,
+              textAlign: 'center',
+              }}
+            >
+
+              <Typography variant="h6" sx={{ color: secondary, marginBottom: 2 }}>
+                {noVideoStrings.header}
+              </Typography>
+              <Typography variant="body1" sx={{ color: primary }}>
+                {noVideoStrings.askForCookies}
+              </Typography>
+              <Button 
+                    onClick={giveCookieConsent}
+                    sx={{
+                        backgroundColor: tertiary,
+                    }}
+              >
+                {noVideoStrings.agree}
+              </Button>
+              <Typography variant="body1" sx={{ color: primary }}>
+                <br />
+                {noVideoStrings.text}
+                <a href="/datenschutz" style={{ color: secondary }}>
+                  {noVideoStrings.link}
+                </a>
+                {noVideoStrings.dot}
+              </Typography>
+            
+            </Box>
+          )}
       </div>
       <Box
         sx={{
@@ -96,6 +144,11 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo 
           borderBottomLeftRadius: windowSizeInfo.isLargeWindow ? 5 : 0,
         }}
       >
+        <MuiLink
+        href={`https://www.youtube.com/watch?v=${videoId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Typography
           variant="h5"
           component="div"
@@ -106,6 +159,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo 
         >
           {contentStrings.video.header}
         </Typography>
+        </MuiLink>
         <Typography
           variant="body1"
           component="div"

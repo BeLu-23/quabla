@@ -22,6 +22,9 @@ const theme = createTheme({
     },
     tertiary: {
       main: '#52BD95',
+    },
+    warning: {
+      main: '#bfbfbf',
     }
   },
   typography: {

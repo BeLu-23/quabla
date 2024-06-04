@@ -1,7 +1,7 @@
 import { Album, Group, Home, Mail, Mic, PlayCircle } from "@mui/icons-material";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { header } from "../utility/header";
+import { header } from "../utility/otherContent";
 import React from "react";
 
 interface NavMenuProps {

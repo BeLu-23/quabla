@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { header } from "../utility/header";
+import { header } from "../utility/otherContent";
 import Carousel from "react-material-ui-carousel";
 import theme from "../utility/theme";
 
