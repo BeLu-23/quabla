@@ -104,14 +104,14 @@ export const header = {
 };
 
 export const cookieBannerString = {
-    header: 'Akzeptierst du notwendige Cookies?',
+    header: 'Wir verwenden Cookies',
     content: `Auf unserer Seite zeigen wir eines oder mehrere unserer YouTube Videos. 
         Um dir diese hier anzusehen, werden Drittanbieter-Cookies verwendet. 
         Bitte siehe hierzu unsere `,
     link: 'Datenschutzerklärung',
     dot: '.',
-    agree: 'Nur notwendige Cookies akzeptieren',
-    disagree: 'Keine Cookies',
+    agree: 'Alle Cookies',
+    disagree: 'Nur notwendige Cookies',
 }
 
 export const noVideoStrings = {

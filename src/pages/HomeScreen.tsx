@@ -64,7 +64,7 @@ const HomeScreen = () => {
       <YouTubeEmbed
         videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"
         getWindowSizeInfo={getWindowSizeInfo}
-        giveCookieConsent={giveCookieConsent}
+        // giveCookieConsent={giveCookieConsent}
         cookie={cookies}
       />
       <RespSection

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import theme from "../utility/theme";
-import { Button, Typography, Link as MuiLink } from "@mui/material";
-import { contentStrings, header, noVideoStrings } from "../utility/contentStrings";
+import { Typography, Link as MuiLink } from "@mui/material";
+import { contentStrings, header } from "../utility/contentStrings";
 
 interface YouTubeEmbedProps {
   videoId: string;
@@ -11,24 +11,27 @@ interface YouTubeEmbedProps {
     isSmallWindow: boolean;
     size: string;
   };
-  giveCookieConsent: () => void;
+  // giveCookieConsent: () => void;
   cookie: {
     cookieConsent?: boolean;
   };
 }
 
-const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo, giveCookieConsent, cookie }) => {
+const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo, 
+  // giveCookieConsent, 
+  cookie }) => {
 
   const primary = theme.palette.primary.main;
   const secondary = theme.palette.secondary.main;
   const tertiary = theme.palette.tertiary.main;
-  const warning = theme.palette.warning.main;
+  // const warning = theme.palette.warning.main;
 
   const generateHtmlContent = (content: string, color: string): string => {
     return content.replace('{color}', color)
                   .replace('{section}', header.gigs);
   };
   const htmlContent = generateHtmlContent(contentStrings.video.content, tertiary);
+  const cookieUrlString = cookie.cookieConsent ? '' : '-nocookie';
 
   const windowSizeInfo = getWindowSizeInfo();
 
@@ -39,6 +42,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
         backgroundColor: tertiary,
         width: "100vw",
         pt: "64px",
+        mt: "64px",
         pb: windowSizeInfo.size == "small" ? 0 : 5,
         display: "flex",
         flexDirection: "column",
@@ -71,7 +75,7 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
           borderTopLeftRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
         }}
       >
-        {cookie.cookieConsent ? (
+        {/* {cookie.cookieConsent ? ( */}
           <iframe
             style={{
               position: "absolute",
@@ -80,54 +84,54 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
               width: "100%",
               height: "100%",
             }}
-            src={`https://www.youtube-nocookie.com/embed/${videoId}`}
+            src={`https://www.youtube${cookieUrlString}.com/embed/${videoId}`}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="YouTube video"
           />
-          ) : (
-            <Box sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-              backgroundColor: warning, 
-              padding: 3,
-              textAlign: 'center',
-              }}
-            >
+           {/* ) : (
+             {/* <Box sx={{ */}
+               {/* position: "absolute",
+               top: 0,
+               left: 0,
+               width: "100%",
+               height: "100%",
+               display: 'flex',
+               flexDirection: 'column',
+               justifyContent: 'center',
+               alignItems: 'center',
+               backgroundColor: warning, 
+               padding: 3,
+               textAlign: 'center',
+               }} */}
+             {/* > */}
 
-              <Typography variant="h6" sx={{ color: secondary, marginBottom: 2 }}>
-                {noVideoStrings.header}
-              </Typography>
-              <Typography variant="body1" sx={{ color: primary }}>
-                {noVideoStrings.askForCookies}
-              </Typography>
-              <Button 
-                    onClick={giveCookieConsent}
-                    sx={{
-                        backgroundColor: tertiary,
-                    }}
-              >
-                {noVideoStrings.agree}
-              </Button>
-              <Typography variant="body1" sx={{ color: primary }}>
-                <br />
-                {noVideoStrings.text}
-                <a href="/datenschutz" style={{ color: secondary }}>
-                  {noVideoStrings.link}
-                </a>
-                {noVideoStrings.dot}
-              </Typography>
+               {/* <Typography variant="h6" sx={{ color: secondary, marginBottom: 2 }}>
+                 {noVideoStrings.header}
+               </Typography>
+               <Typography variant="body1" sx={{ color: primary }}>
+                 {noVideoStrings.askForCookies}
+               </Typography>
+               <Button 
+                     onClick={giveCookieConsent}
+                     sx={{
+                         backgroundColor: tertiary,
+                     }}
+               > */}
+                 {/* {noVideoStrings.agree} */}
+               {/* </Button>
+               <Typography variant="body1" sx={{ color: primary }}>
+                 <br />
+                 {noVideoStrings.text}
+                 <a href="/datenschutz" style={{ color: secondary }}>
+                   {noVideoStrings.link}
+                 </a>
+                 {noVideoStrings.dot}
+               </Typography> */}
             
-            </Box>
-          )}
+             {/* </Box> */}
+           {/* )} */}
       </div>
       <Box
         sx={{
