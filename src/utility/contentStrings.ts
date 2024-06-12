@@ -104,9 +104,15 @@ export const header = {
 };
 
 export const ariaLabels = {
-    // home: 'Home',
-    // video: 'Video',
-    // gigs: "Auftritte",
+    navBar: "Main navigation bar",
+    facebook: "Facebook",
+    instagram: "Instagram",
+    iconYoutube: "YouTube",
+    title: "Title image section with carousel",
+    scrollRecordings: "Scroll to recordings section",
+    scrollVideo: "Scroll to video section",
+    carousel: "Image carousel",
+    carouselImage: "Carousel image",
     recordings: "Play recordings on Spotify",
     footer: "Footer",
     impressum: "Impressum",
@@ -119,8 +125,6 @@ export const ariaLabels = {
     cookieDescription: "cookie-consent-dialog-description",
     cookieDecline: "Decline cookies",
     cookieAccept: "Accept cookies",
-    // aboutUs: 'Über Uns',
-    // contact: 'Kontakt',
 };
 
 export const cookieBannerString = {
