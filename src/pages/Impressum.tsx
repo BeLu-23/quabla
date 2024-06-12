@@ -1,14 +1,25 @@
 import { Box, Container, Typography } from "@mui/material";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Impressum = () => {
-    
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
     useEffect(() => {
-        document.getElementById("imprOBEN")?.scrollIntoView({ behavior: 'smooth' })
-      }, []);
+        if (containerRef.current) {
+            containerRef.current.focus();
+            containerRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, []);
 
     return ( 
-        <Container id="imprOBEN" maxWidth="md" sx={{ padding: 4 }}>
+        <Container 
+            id="imprOBEN" 
+            maxWidth="md" 
+            sx={{ padding: 4 }} 
+            tabIndex={-1} 
+            ref={containerRef}
+            aria-label="Impressum Container"
+        >
             <Typography variant="h4" component="h1" gutterBottom>
                 Impressum
             </Typography>

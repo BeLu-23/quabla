@@ -16,7 +16,7 @@ const HomeScreen = () => {
   const [cookies, setCookies] = useCookies(["cookieConsent"]);
 
   const giveCookieConsent = () => {
-      setCookies("cookieConsent", true, {path: "/"});
+    setCookies("cookieConsent", true, {path: "/"});
   }
 
   const getWindowSizeInfo = () => {
@@ -58,7 +58,9 @@ const HomeScreen = () => {
 
   return (
     <div>
-      {!cookies.cookieConsent && <CookieConsent giveCookieConsent={giveCookieConsent} />}
+      {!cookies.cookieConsent && (
+        <CookieConsent giveCookieConsent={giveCookieConsent} />
+      )}
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />
       <TitleImageSection getWindowSizeInfo={getWindowSizeInfo} />
       <YouTubeEmbed
@@ -72,24 +74,28 @@ const HomeScreen = () => {
         imageUrl="/ssf_2024_1.png"
         secNumber={secNumbers[0]}
         getWindowSizeInfo={getWindowSizeInfo}
+        imageAlt={header.gigs}
       />
       <RespSection
         headerValue={header.recordings}
         imageUrl="/albumPic.jpg"
         secNumber={secNumbers[1]}
         getWindowSizeInfo={getWindowSizeInfo}
+        imageAlt={header.recordings}
       />
       <RespSection
         headerValue={header.aboutUs}
         imageUrl="/aboutUsPic.jpg"
         secNumber={secNumbers[2]}
         getWindowSizeInfo={getWindowSizeInfo}
+        imageAlt={header.aboutUs}
       />
       <RespSection
         headerValue={header.contact}
         imageUrl="/kontaktPic2-compressed.jpg"
         secNumber={secNumbers[3]}
         getWindowSizeInfo={getWindowSizeInfo}
+        imageAlt={header.contact}
       />
       <Footer isSmallWindow={getWindowSizeInfo().isSmallWindow} />
     </div>

@@ -2,18 +2,19 @@ import { Box, Link, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import theme from "../utility/theme";
 import NavIcons from "./NavIcons";
+import { ariaLabels } from "../utility/contentStrings";
 
 interface FooterProps {
   isSmallWindow: boolean;
 }
 
-const Footer = ({isSmallWindow}: FooterProps) => {
+const Footer = ({ isSmallWindow }: FooterProps) => {
   return (
     <Box
       sx={{
         backgroundColor: isSmallWindow 
-                            ? theme.palette.tertiary.main
-                            : theme.palette.secondary.main,
+                          ? theme.palette.tertiary.main
+                          : theme.palette.secondary.main,
         color: theme.palette.primary.main,
         display: "flex",
         flexDirection: "column",
@@ -21,6 +22,8 @@ const Footer = ({isSmallWindow}: FooterProps) => {
         padding: 2,
         textAlign: "center",
       }}
+      role="contentinfo"
+      aria-label={ariaLabels.footer}
     >
       <NavIcons justifyContent="center" marginBottom={2} />
 
@@ -39,7 +42,12 @@ const Footer = ({isSmallWindow}: FooterProps) => {
             marginRight: 2,
           }}
         >
-          <Link component={RouterLink} to="/impressum/" color="inherit">
+          <Link
+            component={RouterLink}
+            to="/impressum/"
+            color="inherit"
+            aria-label={ariaLabels.impressum}
+          >
             Impressum
           </Link>
         </Typography>
@@ -50,7 +58,12 @@ const Footer = ({isSmallWindow}: FooterProps) => {
             textDecoration: "underline",
           }}
         >
-          <Link component={RouterLink} to="/datenschutz/" color="inherit">
+          <Link
+            component={RouterLink}
+            to="/datenschutz/"
+            color="inherit"
+            aria-label={ariaLabels.datenschutz}
+          >
             Datenschutz
           </Link>
         </Typography>

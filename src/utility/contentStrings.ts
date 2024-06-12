@@ -103,6 +103,26 @@ export const header = {
     contact: 'Kontakt',
 };
 
+export const ariaLabels = {
+    // home: 'Home',
+    // video: 'Video',
+    // gigs: "Auftritte",
+    recordings: "Play recordings on Spotify",
+    footer: "Footer",
+    impressum: "Impressum",
+    datenschutz: "Datenschutz",
+    youtube: "YouTube video section",
+    video: "YouTube video player",
+    videoDescription: "YouTube video description",
+    videoLink: "Watch on YouTube",
+    cookieTitle: "cookie-consent-dialog-title",
+    cookieDescription: "cookie-consent-dialog-description",
+    cookieDecline: "Decline cookies",
+    cookieAccept: "Accept cookies",
+    // aboutUs: 'Über Uns',
+    // contact: 'Kontakt',
+};
+
 export const cookieBannerString = {
     header: 'Wir verwenden Cookies',
     content: `Auf unserer Seite zeigen wir eines oder mehrere unserer YouTube Videos. 

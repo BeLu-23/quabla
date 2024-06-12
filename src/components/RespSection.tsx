@@ -1,20 +1,21 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import theme from "../utility/theme";
-import { contentStrings, header } from "../utility/contentStrings";
+import { ariaLabels, contentStrings, header } from "../utility/contentStrings";
 
 interface RespSectionProps {
     headerValue: string;
     imageUrl: string;
+    imageAlt: string;
     secNumber?: number;
     getWindowSizeInfo: () => {
         isLargeWindow: boolean;
         isMediumWindow: boolean;
         isSmallWindow: boolean;
         size: string;
-      };
+    };
 }
 
-const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: RespSectionProps) => {
+const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSizeInfo }: RespSectionProps) => {
 
     const headerKey = Object.keys(header).find(key => header[key as keyof typeof header] === headerValue) as keyof typeof contentStrings | undefined;
     const windowSizeInfo = getWindowSizeInfo();
@@ -23,9 +24,9 @@ const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: Resp
         if (num) {
             return num % 2 === 0;
         } else {
-            return false
+            return false;
         }
-    } 
+    }
 
     const backgroundColor = windowSizeInfo.isSmallWindow 
                             ? theme.palette.tertiary.main
@@ -45,19 +46,17 @@ const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: Resp
 
     const textColorCard = theme.palette.primary.main;
 
-    
     if (!headerKey) {
         return null;
     }
     const content = contentStrings[headerKey];
-    const isRecordingSection = headerKey === "recordings"
+    const isRecordingSection = headerKey === "recordings";
 
     const generateHtmlContent = (content: string, color: string): string => {
         return content.replace('{color}', color);
     };
 
     const htmlContent = generateHtmlContent(content.content, backgroundColor);
-
 
     const respSectionStyle = { 
         backgroundColor: backgroundColor || 'transparent', 
@@ -69,13 +68,14 @@ const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: Resp
         alignItems: "center",
         textAlign: "center", 
     };
-    
+
     return ( 
         <Box 
             id={headerValue}
             sx={{ 
                 ...respSectionStyle,  
             }}
+            aria-label={`${headerValue} section`}
         >
             <Typography
                 variant="h4"
@@ -102,17 +102,20 @@ const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: Resp
                 }}
                 onClick={() =>
                     isRecordingSection
-                    ?   window.open(
-                            "https://open.spotify.com/intl-de/album/3nUKbudJ3WSClN0qQQlHZE",
-                            "_blank"
-                        )
+                    ? window.open(
+                        "https://open.spotify.com/intl-de/album/3nUKbudJ3WSClN0qQQlHZE",
+                        "_blank"
+                      )
                     : undefined
                   }
+                role={isRecordingSection ? "button" : undefined}
+                tabIndex={isRecordingSection ? 0 : undefined}
+                aria-label={isRecordingSection ? ariaLabels.recordings : undefined}
             >
                 <CardMedia
                     component="img"
                     image={imageUrl}
-                    alt={headerValue}
+                    alt={`${imageAlt} image`}
                     sx={{
                         height: "auto",
                         width: "100%",
@@ -159,5 +162,5 @@ const RespSection = ({headerValue, imageUrl, secNumber, getWindowSizeInfo}: Resp
         </Box>
      );
 }
- 
+
 export default RespSection;

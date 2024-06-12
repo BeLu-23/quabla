@@ -12,9 +12,9 @@ function App() {
       <CssBaseline />
       <BrowserRouter basename="/">
         <Routes>
-          <Route path="/" Component={HomeScreen} />
-          <Route path="/impressum/" Component={Impressum} />
-          <Route path="/datenschutz/" Component={Datenschutz} />
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/impressum/" element={<Impressum />} />
+          <Route path="/datenschutz/" element={<Datenschutz />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import theme from "../utility/theme";
 import { Typography, Link as MuiLink } from "@mui/material";
-import { contentStrings, header } from "../utility/contentStrings";
+import { ariaLabels, contentStrings, header } from "../utility/contentStrings";
 
 interface YouTubeEmbedProps {
   videoId: string;
@@ -46,9 +46,11 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
         pb: windowSizeInfo.size == "small" ? 0 : 5,
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center", // Zentriere den Inhalt horizontal
-        alignItems: "center", // Zentriere den Inhalt vertikal
+        justifyContent: "center",
+        alignItems: "center",
       }}
+      role="region"
+      aria-label={ariaLabels.youtube}
     >
       <Typography
         variant="h4"
@@ -76,21 +78,22 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
         }}
       >
         {/* {cookie.cookieConsent ? ( */}
-          <iframe
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            src={`https://www.youtube${cookieUrlString}.com/embed/${videoId}`}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="YouTube video"
-          />
-           {/* ) : (
+        <iframe
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+          src={`https://www.youtube${cookieUrlString}.com/embed/${videoId}`}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="YouTube video"
+          aria-label={ariaLabels.video}
+        />
+        {/* ) : (
              {/* <Box sx={{ */}
                {/* position: "absolute",
                top: 0,
@@ -146,22 +149,24 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
           borderBottomRightRadius: windowSizeInfo.isLargeWindow ? 5 : 0,
           borderBottomLeftRadius: windowSizeInfo.isLargeWindow ? 5 : 0,
         }}
+        aria-label={ariaLabels.videoDescription}
       >
         <MuiLink
-        href={`https://www.youtube.com/watch?v=${videoId}`}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Typography
-          variant="h5"
-          component="div"
-          gutterBottom
-          sx={{
-            color: primary,
-          }}
+          href={`https://www.youtube.com/watch?v=${videoId}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={ariaLabels.videoLink}
         >
-          {contentStrings.video.header}
-        </Typography>
+          <Typography
+            variant="h5"
+            component="div"
+            gutterBottom
+            sx={{
+              color: primary,
+            }}
+          >
+            {contentStrings.video.header}
+          </Typography>
         </MuiLink>
         <Typography
           variant="body1"
