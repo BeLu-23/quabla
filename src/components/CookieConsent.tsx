@@ -1,19 +1,25 @@
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link, Typography } from "@mui/material";
 import React from "react";
 import theme from "../utility/theme";
-import { Link as RouterLink } from "react-router-dom";
-import { ariaLabels, cookieBannerString } from "../utility/contentStrings";
+import { Link as RouterLink, useParams } from "react-router-dom";
+import { ariaLabels } from "../utility/contentStrings";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 interface CookieConsentProps {
     giveCookieConsent: () => void;
+    isSmallWindow: boolean;
 }
 
-const CookieConsent = ({ giveCookieConsent }: CookieConsentProps) => {
+const CookieConsent = ({ giveCookieConsent, isSmallWindow }: CookieConsentProps) => {
 
+    const { t } = useTranslation();
+    const { lang } = useParams<{ lang: string }>();
     const [open, setOpen] = React.useState(true);
+    const privacyPolicyLink = '/' + lang + '/' + 'privacy-policy';
 
     const handleClose = (answer: string) => {
-        if (answer === cookieBannerString.agree) {
+        if (answer === t('CookieAgree')) {
             giveCookieConsent();
         }
         setOpen(false);
@@ -26,10 +32,14 @@ const CookieConsent = ({ giveCookieConsent }: CookieConsentProps) => {
             aria-labelledby={ariaLabels.cookieTitle}
             aria-describedby={ariaLabels.cookieDescription}
         >
-            <DialogTitle id="cookie-consent-dialog-title">{cookieBannerString.header}</DialogTitle>
+            <DialogTitle id="cookie-consent-dialog-title"
+                sx={{display: 'flex', justifyContent: 'space-between'}}>
+                { t('CookieHeader') }
+                <LanguageSwitcher isSmallWindow={isSmallWindow}/>
+            </DialogTitle>
             <DialogContent>
                 <DialogContentText id="cookie-consent-dialog-description">
-                    {cookieBannerString.content}
+                    { t('CookieContent') }
                     <Typography
                         component="span"
                         sx={{
@@ -37,31 +47,31 @@ const CookieConsent = ({ giveCookieConsent }: CookieConsentProps) => {
                             textDecoration: "underline",
                         }}
                     >
-                        <Link sx={{color: theme.palette.primary.main}} component={RouterLink} to="/datenschutz/" color="inherit">
-                            {cookieBannerString.link}
+                        <Link sx={{color: theme.palette.primary.main}} component={RouterLink} to={privacyPolicyLink} color="inherit">
+                            { t('CookieLink') }
                         </Link>
                     </Typography>
-                    {cookieBannerString.dot}
+                    { t('Dot') }
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
                 <Button 
-                    onClick={() => { handleClose(cookieBannerString.disagree) }} 
+                    onClick={() => { handleClose(t('CookieDisagree')) }} 
                     sx={{
                         backgroundColor: theme.palette.secondary.main,
                     }}
                     aria-label={ariaLabels.cookieDecline}
                 >
-                    {cookieBannerString.disagree}
+                    { t('CookieDisagree') }
                 </Button>
                 <Button 
-                    onClick={() => { handleClose(cookieBannerString.agree) }} 
+                    onClick={() => { handleClose(t('CookieAgree')) }} 
                     sx={{
                         backgroundColor: theme.palette.secondary.main,
                     }}
                     aria-label={ariaLabels.cookieAccept}
                 >
-                    {cookieBannerString.agree}
+                    { t('CookieAgree') }
                 </Button>
             </DialogActions>
         </Dialog>

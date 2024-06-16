@@ -7,6 +7,7 @@ import RespSection from "../components/RespSection";
 import { useCookies } from "react-cookie";
 import CookieConsent from "../components/CookieConsent";
 import { header } from "../utility/contentStrings";
+import { t } from "i18next";
 
 const HomeScreen = () => {
 
@@ -59,14 +60,13 @@ const HomeScreen = () => {
   return (
     <div>
       {!cookies.cookieConsent && (
-        <CookieConsent giveCookieConsent={giveCookieConsent} />
+        <CookieConsent giveCookieConsent={giveCookieConsent} isSmallWindow={getWindowSizeInfo().isSmallWindow} />
       )}
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />
       <TitleImageSection getWindowSizeInfo={getWindowSizeInfo} />
       <YouTubeEmbed
         videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"
         getWindowSizeInfo={getWindowSizeInfo}
-        // giveCookieConsent={giveCookieConsent}
         cookie={cookies}
       />
       <RespSection
@@ -74,7 +74,7 @@ const HomeScreen = () => {
         imageUrl="/ssf_2024_1.png"
         secNumber={secNumbers[0]}
         getWindowSizeInfo={getWindowSizeInfo}
-        imageAlt={header.gigs}
+        imageAlt={t('headergigs')}
       />
       <RespSection
         headerValue={header.recordings}

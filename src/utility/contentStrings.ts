@@ -3,94 +3,132 @@ interface Content {
     subtitle: string | null;
     content: string;
 }
-  
-interface ContentStrings {
-    [key: string]: Content;
-}
 
-export const contentStrings: ContentStrings = {
+export const contentStrings: {[key: string]: { [lng: string]: Content }} = {
     home: {
-        header: '',
-        subtitle: null,
-        content: '',
+        de: {
+            header: '',
+            subtitle: null,
+            content: '',
+        },
+        en: {
+            header: '',
+            subtitle: null,
+            content: '',
+        }
     },
     video: {
+        de: {
             header: 'Quabla - With You',
             subtitle: null,
-            content: `
-            Unser Song "With You" live auf dem 48h Wilhelmsburg Festival in 2023.
-              <br />
-              <br />
-              Du hättest dabei sein können. Aber es gibt bestimmt ein nächstes Mal.
-              Schau doch mal bei unseren 
-              <a
-              style="color: {color}; cursor: pointer; text-decoration: underline;"
-              onclick="document.getElementById('{section}')?.scrollIntoView({ behavior: 'smooth' }); return false;"
-              >
-                kommenden Auftritten</a>.
-            `,
+            content: '',
         },
+        en: {
+            header: 'Quabla - With You',
+            subtitle: null,
+            content: '',
+        }
+    },
     gigs: {
-        header: 'Sternstunden Festival an der Sternwarte in Bergedorf',
-        subtitle: 'Datum: 20. Juli 2024 <br /> Zeit: 12.30 Uhr',
-        content: `Unsere Band wird live auf dem Sternstunden Festival auftreten! Kommt vorbei und bereitet euch auf 
-        tolle Musik und gute Stimmung vor. Wir freuen uns 
-        darauf, euch alle dort zu sehen! Tickets gibts 
-        <a
-        href="https://www.sternstundenfestival.de/tickets"
-        target="_blank"
-        style="color: {color}; font-weight: bold" }}
-        >
-        hier</a>.
-        `,
+        de: {
+            header: 'Sternstunden Festival an der Sternwarte in Bergedorf',
+            subtitle: 'Datum: 20. Juli 2024 <br /> Zeit: 12.30 Uhr',
+            content: `<a
+                href="https://www.sternstundenfestival.de/tickets"
+                target="_blank"
+                style="color: {color}; font-weight: bold" }}
+                >
+                Tickets</a>`,
+        },
+        en: {
+            header: 'Sternstunden Festival at the Observatory in Bergedorf',
+            subtitle: 'Date: July 20, 2024 <br /> Time: 12.30 PM',
+            content: `<a
+                href="https://www.sternstundenfestival.de/tickets"
+                target="_blank"
+                style="color: {color}; font-weight: bold" }}
+                >
+                Tickets</a>`,
+        }
     },
     recordings: {
-        header: 'Bogisland',
-        subtitle: null,
-        content: `
-        Check unser erstes Album aus. Hier noch unter einem anderen Namen,
-        aber die selbe Mukke.
-        <br />
-        <br />
-        Jetzt auf Spotify verfügbar!
-        `,
+        de: {
+            header: '',
+            subtitle: null,
+            content: '',
+        },
+        en: {
+            header: '',
+            subtitle: null,
+            content: '',
+        }
     },
     aboutUs: {
-        header: 'Unsere Band',
-        subtitle: null,
-        content: `
-        Quabla ist eine Band aus Hamburg, die eine einzigartige Mischung aus Jazz-Einflüssen, 
-        Rock und experimenteller Musik schafft. Der Stil ist geprägt von einer Fusion aus sanften 
-        Jazzharmonien mit der Intensität und Energie des Rock, ergänzt durch atmosphärische und manchmal 
-        psychedelische Elemente. 
-        <br />
-        Von introspektiv und ruhig bis hin zu lebhaft und rhythmisch werden verschiedene 
-        Genres nahtlos miteinander verbunden, sodass ein frisches und überzeugendes Hörerlebnis geschaffen wird. 
-        <br />
-        <br />
-        Wenn du Musik magst, die Grenzen überschreitet und gerne auch mal unkonventionell daherkommt, freuen wir 
-        uns auf dich als Zuhörer/-in!
+        de: {
+            header: 'Unsere Band',
+            subtitle: null,
+            content: `
+            Quabla schafft eine einzigartige Mischung aus sanften Jazzharmonien mit der Intensität 
+            und Energie des Rock, ergänzt durch atmosphärische und manchmal psychedelische Elemente.
+            <br />
+            Von introspektiv und ruhig bis hin zu lebhaft und rhythmisch ist ihre Musik genreübergreifend, 
+            sodass ein frisches und überzeugendes Hörerlebnis geschaffen wird.
+            <br />
+            <br />
+            Wenn du Musik magst, die Grenzen überschreitet und gerne auch mal unkonventionell daherkommt, 
+            freuen wir uns auf dich als Zuhörer/-in!
         `,
+        },
+        en: {
+            header: 'Introducing Our Band',
+            subtitle: null,
+            content: `Quabla creates a unique blend of gentle jazz harmonies with the intensity and energy of 
+            rock, complemented by atmospheric and sometimes psychedelic elements.
+            <br />
+            Ranging from introspective and calm to lively and rhythmic, their music transcends 
+            genres, creating a fresh and compelling listening experience.
+            <br />
+            <br />
+            If you enjoy music that pushes boundaries and embraces unconventionality, we look 
+            forward to having you as a listener!`,
+        }
     },
     contact: {
-        header: 'So erreichst du uns',
-        subtitle: null,
-        content: `
-        Schreib uns doch gerne eine Mail, falls du uns buchen oder einfach
-        auch mal nur quatschen möchtest:
-        <br />
-        <br />
-        E-Mail: <a
-        href="mailto:contact@quabla-band.com"
-        style="color: {color};" }}
-        >
-        contact@quabla-band.com
-        </a>
-        <br />
-        <br />
-        Wir freuen uns über deine Nachricht und werden uns so schnell wie
-        möglich bei dir melden.
-        `,
+        de: {
+            header: 'So erreichst du uns',
+            subtitle: null,
+            content: `
+            Schreib' uns gerne eine Mail, falls du Fragen hast oder uns buchen möchtest:
+            <br />
+            <br />
+            E-Mail: <a
+            href="mailto:contact@quabla-band.com"
+            style="color: {color};" }}
+            >
+            contact@quabla-band.com
+            </a>
+            <br />
+            <br />
+            Wir freuen uns über deine Nachricht und werden uns so 
+            schnell wie möglich bei dir melden.
+            `,
+        },
+        en: {
+            header: 'How to Reach Us',
+            subtitle: null,
+            content: `Feel free to send us an email if you have any questions or would like to book us:
+            <br />
+            <br />
+            Email: <a
+            href="mailto:contact@quabla-band.com"
+            style="color: {color};" }}
+            >
+            contact@quabla-band.com
+            </a>
+            <br />
+            <br />
+            We look forward to your message and will get back to you as soon as possible.`,
+        }
     },
 };
 
@@ -98,7 +136,7 @@ export const header = {
     home: 'Home',
     video: 'Video',
     gigs: "Auftritte",
-    recordings: "Album",
+    recordings: "Audio",
     aboutUs: 'Über Uns',
     contact: 'Kontakt',
 };
@@ -106,6 +144,9 @@ export const header = {
 export const ariaLabels = {
     navBar: "Main navigation bar",
     facebook: "Facebook",
+    spotify: "Spotify",
+    bandcamp: "Bandcamp",
+    appleMusic: "AppleMusic",
     instagram: "Instagram",
     iconYoutube: "YouTube",
     title: "Title image section with carousel",
@@ -126,28 +167,3 @@ export const ariaLabels = {
     cookieDecline: "Decline cookies",
     cookieAccept: "Accept cookies",
 };
-
-export const cookieBannerString = {
-    header: 'Wir verwenden Cookies',
-    content: `Auf unserer Seite zeigen wir eines oder mehrere unserer YouTube Videos. 
-        Um dir diese hier anzusehen, werden Drittanbieter-Cookies verwendet. 
-        Bitte siehe hierzu unsere `,
-    link: 'Datenschutzerklärung',
-    dot: '.',
-    agree: 'Alle Cookies',
-    disagree: 'Nur notwendige Cookies',
-}
-
-export const noVideoStrings = {
-    header: 'Sorry...  Keine Cookies = Kein Video',
-    text: `Schau doch sonst mal in unserer `,
-    link: 'Datenschutzerklärung',
-    dot: ' nach.',
-    askForCookies: 'Möchtest du doch die Cookies akzeptieren?',
-    agree: 'Nur notwendige Cookies akzeptieren',
-}
-
-export const titlePageButton = {
-    recordings: 'Zur Musik',
-    video: 'Zum Video',
-}

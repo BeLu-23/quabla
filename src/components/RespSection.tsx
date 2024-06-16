@@ -1,6 +1,8 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import theme from "../utility/theme";
 import { ariaLabels, contentStrings, header } from "../utility/contentStrings";
+import AudioIcons from "./AudioIcons";
+import { useTranslation } from "react-i18next";
 
 interface RespSectionProps {
     headerValue: string;
@@ -16,7 +18,8 @@ interface RespSectionProps {
 }
 
 const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSizeInfo }: RespSectionProps) => {
-
+    const { t, i18n } = useTranslation();
+    const currentLanguage = i18n.language.split('-')[0]; // Use only the base language
     const headerKey = Object.keys(header).find(key => header[key as keyof typeof header] === headerValue) as keyof typeof contentStrings | undefined;
     const windowSizeInfo = getWindowSizeInfo();
 
@@ -46,10 +49,12 @@ const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSize
 
     const textColorCard = theme.palette.primary.main;
 
-    if (!headerKey) {
-        return null;
+    if (!headerKey || !contentStrings[headerKey] || !contentStrings[headerKey][currentLanguage]) {
+        console.error(`Missing content for headerKey: ${headerKey} and language: ${currentLanguage}`);
+        return null; // or a meaningful fallback
     }
-    const content = contentStrings[headerKey];
+
+    const content = contentStrings[headerKey][currentLanguage];
     const isRecordingSection = headerKey === "recordings";
 
     const generateHtmlContent = (content: string, color: string): string => {
@@ -87,7 +92,7 @@ const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSize
                     fontWeight: "bold",
                 }}
             >
-                {headerValue}
+                {t(`header${headerKey}`)}
             </Typography>
             <Card
                 sx={{
@@ -98,16 +103,7 @@ const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSize
                     boxShadow: "none",
                     background: "inherit",
                     borderRadius:  windowSizeInfo.isSmallWindow ? 0 : undefined,
-                    cursor: isRecordingSection ? "pointer" : "default",
                 }}
-                onClick={() =>
-                    isRecordingSection
-                    ? window.open(
-                        "https://open.spotify.com/intl-de/album/3nUKbudJ3WSClN0qQQlHZE",
-                        "_blank"
-                      )
-                    : undefined
-                  }
                 role={isRecordingSection ? "button" : undefined}
                 tabIndex={isRecordingSection ? 0 : undefined}
                 aria-label={isRecordingSection ? ariaLabels.recordings : undefined}
@@ -122,22 +118,36 @@ const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSize
                         objectFit: "cover",
                         objectPosition: "center",
                         maxHeight: isRecordingSection ? 'none' : 400,
+                        cursor: isRecordingSection ? "pointer" : "default",
                     }}
+                    onClick={() =>
+                        isRecordingSection
+                        ? window.open(
+                            "https://open.spotify.com/intl-de/album/3nUKbudJ3WSClN0qQQlHZE",
+                            "_blank"
+                          )
+                        : undefined
+                    }
                 />
                 <CardContent
                     sx={{
                         backgroundColor: backgroundColorCard,
                     }}
                 >
-                    <Typography
-                        variant="h5"
-                        component="div"
-                        gutterBottom
-                        sx={{
-                            color: textColorCard,
-                        }}
-                        dangerouslySetInnerHTML={{ __html: content.header }}
-                    />
+                    {headerValue !== "Audio" ? (
+                            <>
+                    
+                            <Typography
+                                variant="h5"
+                                component="div"
+                                gutterBottom
+                                sx={{
+                                    color: textColorCard,
+                                }}
+                                dangerouslySetInnerHTML={{ __html: content.header }}
+                            />
+                      
+                    
                     {content.subtitle && 
                         <Typography
                             variant="subtitle1"
@@ -157,6 +167,8 @@ const RespSection = ({ headerValue, imageUrl, imageAlt, secNumber, getWindowSize
                         }}
                         dangerouslySetInnerHTML={{ __html: htmlContent }}
                     />
+                    </>
+                    ) : (<AudioIcons />)}
                 </CardContent>
             </Card>
         </Box>

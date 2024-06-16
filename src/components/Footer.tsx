@@ -1,14 +1,24 @@
 import { Box, Link, Typography } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useParams } from "react-router-dom";
 import theme from "../utility/theme";
 import NavIcons from "./NavIcons";
 import { ariaLabels } from "../utility/contentStrings";
+import { useTranslation } from "react-i18next";
 
 interface FooterProps {
   isSmallWindow: boolean;
 }
 
 const Footer = ({ isSmallWindow }: FooterProps) => {
+
+  const { t } = useTranslation();
+  const { lang } = useParams<{ lang: string }>();
+
+  const impressumLink = '/' + lang + '/' + 'impressum';
+  const privacyPolicyLink = '/' + lang + '/' + 'privacy-policy';
+
+
+
   return (
     <Box
       sx={{
@@ -44,11 +54,11 @@ const Footer = ({ isSmallWindow }: FooterProps) => {
         >
           <Link
             component={RouterLink}
-            to="/impressum/"
+            to={impressumLink}
             color="inherit"
             aria-label={ariaLabels.impressum}
           >
-            Impressum
+            {t('impressum')}
           </Link>
         </Typography>
         <Typography
@@ -60,11 +70,11 @@ const Footer = ({ isSmallWindow }: FooterProps) => {
         >
           <Link
             component={RouterLink}
-            to="/datenschutz/"
+            to={privacyPolicyLink}
             color="inherit"
             aria-label={ariaLabels.datenschutz}
           >
-            Datenschutz
+            {t('datenschutz')}
           </Link>
         </Typography>
       </Box>
@@ -74,7 +84,7 @@ const Footer = ({ isSmallWindow }: FooterProps) => {
           marginTop: 2,
         }}
       >
-        © {new Date().getFullYear()} Quabla. Alle Rechte vorbehalten.
+        {t('footerC') + new Date().getFullYear() + t('footerRights')}
       </Typography>
     </Box>
   );

@@ -1,7 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import theme from "../utility/theme";
-import { ariaLabels, header, titlePageButton } from "../utility/contentStrings";
+import { ariaLabels, header } from "../utility/contentStrings";
+import { useTranslation } from "react-i18next";
 
 interface TitleImageSectionProps {
   getWindowSizeInfo: () => {
@@ -15,6 +16,7 @@ interface TitleImageSectionProps {
 const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
 
   const windowSizeInfo = getWindowSizeInfo();
+  const { t } = useTranslation();
 
   const images = {
     large: ["/title-large-1-compressed.jpg", "/title-large-2-compressed.jpg", "/title-large-3-compressed.jpg"],
@@ -78,7 +80,8 @@ const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
               fontSize: { xs: '14px', sm: '16px', md: '16px' },
             }}
           >
-            {titlePageButton.recordings}
+            {/* {titlePageButton.recordings} */}
+            {t('titleButtonRecording')}
           </Typography>
         </Button>
 
@@ -107,7 +110,8 @@ const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
               fontSize: { xs: '14px', sm: '16px', md: '16px' },
             }}
           >
-            {titlePageButton.video}
+            {/* {titlePageButton.video} */}
+            {t('titleButtonVideo')}
           </Typography>
         </Button>
       </Box>

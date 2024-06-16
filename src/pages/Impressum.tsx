@@ -1,8 +1,10 @@
 import { Box, Container, Typography } from "@mui/material";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const Impressum = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
+    const { t } = useTranslation();
 
     useEffect(() => {
         if (containerRef.current) {
@@ -21,53 +23,53 @@ const Impressum = () => {
             aria-label="Impressum Container"
         >
             <Typography variant="h4" component="h1" gutterBottom>
-                Impressum
+                {t('impressumTitle')}
             </Typography>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                    Angaben gemäß § 5 TMG
+                    {t('impressum1')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Benjamin Lutz<br />
-                    Hintere Gasse 31<br />
-                    70794 Filderstadt<br />
+                    {t('impressum2')}<br />
+                    {t('impressum3')}<br />
+                    {t('impressum4')}<br />
                 </Typography>
             </Box>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                    Kontakt
+                    {t('impressum5')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    E-Mail: contact@quabla-band.com<br />
+                    {t('impressum6')}<br />
                 </Typography>
             </Box>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                    Haftung für Inhalte
+                    {t('impressum7')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                    {t('impressum8')}
                 </Typography>
             </Box>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                    Haftung für Links
+                    {t('impressum9')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                    {t('impressum10')}
                 </Typography>
             </Box>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                    Urheberrecht
+                    {t('impressum11')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                    {t('impressum12')}
                 </Typography>
             </Box>
         </Container>

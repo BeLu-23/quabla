@@ -1,7 +1,9 @@
 import { Album, Group, Home, Mail, Mic, PlayCircle } from "@mui/icons-material";
-import { IconButton, Menu, MenuItem } from "@mui/material";
+import { Divider, IconButton, Menu, MenuItem } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import React from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 import { header } from "../utility/contentStrings";
 
 interface NavMenuProps {
@@ -10,6 +12,7 @@ interface NavMenuProps {
 
 const NavMenu = ({ isSmallWindow }: NavMenuProps) => {
 
+  const { t } = useTranslation();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -54,23 +57,27 @@ const NavMenu = ({ isSmallWindow }: NavMenuProps) => {
         open={Boolean(anchorEl)}
         onClose={() => setAnchorEl(null)}
       >
+        <MenuItem sx={{ display: 'flex', justifyContent: 'center' }}>
+          <LanguageSwitcher isSmallWindow={isSmallWindow} />
+        </MenuItem>
+        <Divider />
         <MenuItem onClick={() => handleClose(header.home)} aria-label="Home">
-          <Home fontSize="large" sx={{ pr: "10%" }} /> {header.home}
+          <Home fontSize="large" sx={{ pr: "10%" }} /> {t('headerhome')}
         </MenuItem>
         <MenuItem onClick={() => handleClose(header.video)} aria-label="Video">
-          <PlayCircle fontSize="large" sx={{ pr: "10%" }} /> {header.video}
+          <PlayCircle fontSize="large" sx={{ pr: "10%" }} /> {t('headervideo')}
         </MenuItem>
         <MenuItem onClick={() => handleClose(header.gigs)} aria-label="Gigs">
-          <Mic fontSize="large" sx={{ pr: "10%" }} /> {header.gigs}
+          <Mic fontSize="large" sx={{ pr: "10%" }} /> {t('headergigs')}
         </MenuItem>
         <MenuItem onClick={() => handleClose(header.recordings)} aria-label="Recordings">
-          <Album fontSize="large" sx={{ pr: "10%" }} /> {header.recordings}
+          <Album fontSize="large" sx={{ pr: "10%" }} /> {t('headerrecordings')}
         </MenuItem>
         <MenuItem onClick={() => handleClose(header.aboutUs)} aria-label="About Us">
-          <Group fontSize="large" sx={{ pr: "10%" }} /> {header.aboutUs}
+          <Group fontSize="large" sx={{ pr: "10%" }} /> {t('headeraboutUs')}
         </MenuItem>
         <MenuItem onClick={() => handleClose(header.contact)} aria-label="Contact">
-          <Mail fontSize="large" sx={{ pr: "10%" }} /> {header.contact}
+          <Mail fontSize="large" sx={{ pr: "10%" }} /> {t('headercontact')}
         </MenuItem>
       </Menu>
     </>

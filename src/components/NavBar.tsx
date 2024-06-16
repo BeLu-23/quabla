@@ -3,6 +3,7 @@ import NavMenu from "./NavMenu";
 import NavIcons from "./NavIcons";
 import theme from "../utility/theme";
 import { ariaLabels } from "../utility/contentStrings";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavBarProps {
   getWindowSizeInfo: () => {
@@ -40,6 +41,7 @@ const NavBar = ({ getWindowSizeInfo }: NavBarProps) => {
             fontSize="medium" 
             isSmallWindow={windowInfo.isSmallWindow}
           />
+          <LanguageSwitcher isSmallWindow={windowInfo.isSmallWindow} />
           <NavMenu isSmallWindow={windowInfo.isSmallWindow} />
         </Toolbar>
       </AppBar>
