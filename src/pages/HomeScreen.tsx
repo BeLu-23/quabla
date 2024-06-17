@@ -16,6 +16,19 @@ const HomeScreen = () => {
 
   const [cookies, setCookies] = useCookies(["cookieConsent"]);
 
+  const videoId = 'OyokKLWtczA?si=lBXrCvu0uFruAXhk';
+  const gigsPic= 'https://github.com/BeLu-23/quablaBandImages/blob/master/ssf_2024_1.png?raw=true';
+  const recordingsPic = 'https://github.com/BeLu-23/quablaBandImages/blob/master/albumPic.jpg?raw=true';
+  const aboutUsPic = 'https://github.com/BeLu-23/quablaBandImages/blob/master/aboutUsPic.jpg?raw=true';
+  const contactPic = 'https://github.com/BeLu-23/quablaBandImages/blob/master/kontaktPic2-compressed.jpg?raw=true';
+
+  // const gigsPic= "/ssf_2024_1.png";
+  // const recordingsPic = "/albumPic.jpg";
+  // const aboutUsPic = "/aboutUsPic.jpg";
+  // const contactPic = "/kontaktPic2-compressed.jpg";
+  
+
+
   const giveCookieConsent = () => {
     setCookies("cookieConsent", true, {path: "/"});
   }
@@ -65,34 +78,34 @@ const HomeScreen = () => {
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />
       <TitleImageSection getWindowSizeInfo={getWindowSizeInfo} />
       <YouTubeEmbed
-        videoId="OyokKLWtczA?si=lBXrCvu0uFruAXhk"
+        videoId={videoId}
         getWindowSizeInfo={getWindowSizeInfo}
         cookie={cookies}
       />
       <RespSection
         headerValue={header.gigs}
-        imageUrl="/ssf_2024_1.png"
+        imageUrl={gigsPic}
         secNumber={secNumbers[0]}
         getWindowSizeInfo={getWindowSizeInfo}
         imageAlt={t('headergigs')}
       />
       <RespSection
         headerValue={header.recordings}
-        imageUrl="/albumPic.jpg"
+        imageUrl={recordingsPic}
         secNumber={secNumbers[1]}
         getWindowSizeInfo={getWindowSizeInfo}
         imageAlt={header.recordings}
       />
       <RespSection
         headerValue={header.aboutUs}
-        imageUrl="/aboutUsPic.jpg"
+        imageUrl={aboutUsPic}
         secNumber={secNumbers[2]}
         getWindowSizeInfo={getWindowSizeInfo}
         imageAlt={header.aboutUs}
       />
       <RespSection
         headerValue={header.contact}
-        imageUrl="/kontaktPic2-compressed.jpg"
+        imageUrl={contactPic}
         secNumber={secNumbers[3]}
         getWindowSizeInfo={getWindowSizeInfo}
         imageAlt={header.contact}

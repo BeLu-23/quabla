@@ -49,6 +49,8 @@ const deTranslation = {
     datenschutz23: 'Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.',
     datenschutz24: 'Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: ',
     datenschutz25: 'https://policies.google.com/privacy?hl=de',
+    datenschutz26: 'Verwendung von externen Bildern',
+    datenschutz27: 'Unsere Website lädt Bilder von externen Quellen (z.B. GitHub), um die Ladezeiten zu verbessern und die Aktualität der Inhalte zu gewährleisten. Diese externen Quellen können technische Daten wie Ihre IP-Adresse erfassen, wenn die Bilder geladen werden. Bitte beachten Sie, dass wir keine Kontrolle über die Datenschutzpraktiken dieser externen Quellen haben.',
     impressumTitle: 'Impressum',
     impressum1: 'Angaben gemäß § 5 TMG',
     impressum2: 'Benjamin Lutz',
@@ -62,7 +64,6 @@ const deTranslation = {
     impressum10: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.',
     impressum11: 'Urheberrecht',
     impressum12: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.',
-  };
-  
-  export default deTranslation;
-  
+};
+
+export default deTranslation;

@@ -13,18 +13,18 @@ const Datenschutz = () => {
         }
     }, []);
 
-    return ( 
-        <Container 
-            id="datenOBEN" 
-            maxWidth="md" 
-            sx={{ padding: 4 }} 
-            tabIndex={-1} 
+    return (
+        <Container
+            id="datenOBEN"
+            maxWidth="md"
+            sx={{ padding: 4 }}
+            tabIndex={-1}
             ref={containerRef}
             aria-label="Datenschutzerklärung Container"
         >
-            <Typography 
-                variant="h4" 
-                component="h1" 
+            <Typography
+                variant="h4"
+                component="h1"
                 gutterBottom
                 aria-label="Datenschutzerklärung"
             >
@@ -51,7 +51,7 @@ const Datenschutz = () => {
                     {t('datenschutz5')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz6')}
+                    {t('datenschutz6')}
                 </Typography>
                 <Typography variant="body1" paragraph>
                     {t('datenschutz7')}
@@ -60,13 +60,13 @@ const Datenschutz = () => {
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                {t('datenschutz8')}
+                    {t('datenschutz8')}
                 </Typography>
                 <Typography variant="h6" component="h3" gutterBottom>
-                {t('datenschutz9')}
+                    {t('datenschutz9')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz10')}
+                    {t('datenschutz10')}
                 </Typography>
                 <List>
                     <ListItem>{t('datenschutz11')}</ListItem>
@@ -77,34 +77,45 @@ const Datenschutz = () => {
                     <ListItem>{t('datenschutz16')}</ListItem>
                 </List>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz17')}
+                    {t('datenschutz17')}
                 </Typography>
             </Box>
 
             <Box mb={4}>
                 <Typography variant="h5" component="h2" gutterBottom>
-                {t('datenschutz18')}
+                    {t('datenschutz18')}
                 </Typography>
                 <Typography variant="h6" component="h3" gutterBottom>
-                {t('datenschutz19')}
+                    {t('datenschutz19')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz20')}
+                    {t('datenschutz20')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz21')}
+                    {t('datenschutz21')}
                 </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz22')}                </Typography>
+                    {t('datenschutz22')}
+                </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz23')}                </Typography>
+                    {t('datenschutz23')}
+                </Typography>
                 <Typography variant="body1" paragraph>
-                {t('datenschutz24')}
+                    {t('datenschutz24')}
                     <a href="https://policies.google.com/privacy?hl=de">{t('datenschutz25')}</a>.
                 </Typography>
             </Box>
+
+            <Box mb={4}>
+                <Typography variant="h5" component="h2" gutterBottom>
+                    {t('datenschutz26')}
+                </Typography>
+                <Typography variant="body1" paragraph>
+                    {t('datenschutz27')}
+                </Typography>
+            </Box>
         </Container>
-     );
+    );
 }
- 
+
 export default Datenschutz;

@@ -63,6 +63,8 @@ const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ videoId, getWindowSizeInfo,
           overflow: "hidden",
           borderTopRightRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
           borderTopLeftRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
+          borderBottomRightRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
+          borderBottomLeftRadius: windowSizeInfo.isLargeWindow ? 6 : 0,
         }}
       >
         <iframe

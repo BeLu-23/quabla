@@ -19,8 +19,17 @@ const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
   const { t } = useTranslation();
 
   const images = {
-    large: ["/title-large-1-compressed.jpg", "/title-large-2-compressed.jpg", "/title-large-3-compressed.jpg"],
-    small: ["/title-small-1-compressed.jpg", "/title-small-2-compressed.jpg", "/title-small-3-compressed.jpg", "/title-small-4-compressed.jpg"],
+    large: [
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-large-1-compressed.jpg?raw=true", 
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-large-2-compressed.jpg?raw=true", 
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-large-3-compressed.jpg?raw=true"
+    ],
+    small: [
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-small-1-compressed.jpg?raw=true", 
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-small-2-compressed.jpg?raw=true", 
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-small-3-compressed.jpg?raw=true", 
+      "https://github.com/BeLu-23/quablaBandImages/blob/master/title-small-4-compressed.jpg?raw=true"
+    ],
   };
 
   const selectedImages = windowSizeInfo.isSmallWindow ? images.small : images.large;
@@ -80,7 +89,6 @@ const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
               fontSize: { xs: '14px', sm: '16px', md: '16px' },
             }}
           >
-            {/* {titlePageButton.recordings} */}
             {t('titleButtonRecording')}
           </Typography>
         </Button>
@@ -110,7 +118,6 @@ const TitleImageSection = ({ getWindowSizeInfo }: TitleImageSectionProps) => {
               fontSize: { xs: '14px', sm: '16px', md: '16px' },
             }}
           >
-            {/* {titlePageButton.video} */}
             {t('titleButtonVideo')}
           </Typography>
         </Button>
