@@ -50,7 +50,7 @@ const deTranslation = {
     datenschutz24: 'Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von YouTube unter: ',
     datenschutz25: 'https://policies.google.com/privacy?hl=de',
     datenschutz26: 'Verwendung von externen Bildern',
-    datenschutz27: 'Unsere Website lädt Bilder von externen Quellen (z.B. GitHub), um die Ladezeiten zu verbessern und die Aktualität der Inhalte zu gewährleisten. Diese externen Quellen können technische Daten wie Ihre IP-Adresse erfassen, wenn die Bilder geladen werden. Bitte beachten Sie, dass wir keine Kontrolle über die Datenschutzpraktiken dieser externen Quellen haben.',
+    datenschutz27: 'Unsere Website verwendet Bilder und andere Inhalte, die extern auf Plattformen wie GitHub gehostet werden. Diese Inhalte stammen von uns selbst und enthalten keine personenbezogenen Daten. Externe Quellen können technische Daten wie Ihre IP-Adresse erfassen, wenn die Inhalte geladen werden. Bitte beachten Sie, dass wir keine Kontrolle über die Datenschutzpraktiken dieser externen Quellen haben.',
     impressumTitle: 'Impressum',
     impressum1: 'Angaben gemäß § 5 TMG',
     impressum2: 'Benjamin Lutz',

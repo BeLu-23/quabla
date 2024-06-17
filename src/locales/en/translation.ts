@@ -50,7 +50,7 @@ const enTranslation = {
     datenschutz24: "Further information on handling user data can be found in YouTube's privacy policy at: ",
     datenschutz25: 'https://policies.google.com/privacy?hl=de',
     datenschutz26: 'Use of External Images',
-    datenschutz27: 'Our website loads images from external sources (e.g., GitHub) to improve loading times and ensure content currency. These external sources may collect technical data such as your IP address when the images are loaded. Please note that we have no control over the privacy practices of these external sources.',
+    datenschutz27: 'Our website uses images and other content hosted externally on platforms such as GitHub. These contents are created by us and do not contain any personal data. External sources may collect technical data such as your IP address when the contents are loaded. Please note that we have no control over the privacy practices of these external sources.',
     impressumTitle: 'Impressum',
     impressum1: 'Information according to § 5 TMG',
     impressum2: 'Benjamin Lutz',

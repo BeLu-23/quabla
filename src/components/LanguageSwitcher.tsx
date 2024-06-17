@@ -23,7 +23,8 @@ const LanguageSwitcher = ({ isSmallWindow }: LanguageSwitcherProps) => {
             onClick={changeLanguage}
             sx={{ display: 'inline-flex', alignItems: 'center', cursor: 'pointer', 
                 marginTop: isSmallWindow ? 1 : 0,
-                marginLeft: isSmallWindow ? 1 : 0,
+                marginLeft: 2,
+                mr: 2,
             }}
         >
             <Avatar 

@@ -29,9 +29,13 @@ const HomeScreen = () => {
   
 
 
-  const giveCookieConsent = () => {
-    setCookies("cookieConsent", true, {path: "/"});
-  }
+  // const giveCookieConsent = () => {
+  //   setCookies("cookieConsent", true, {path: "/"});
+  // }
+
+  const giveCookieConsent = (accepted: boolean) => {
+    setCookies("cookieConsent", accepted, { path: "/" });
+  };
 
   const getWindowSizeInfo = () => {
     const sizeInfo = {
@@ -72,7 +76,7 @@ const HomeScreen = () => {
 
   return (
     <div>
-      {!cookies.cookieConsent && (
+      {cookies.cookieConsent === undefined && (
         <CookieConsent giveCookieConsent={giveCookieConsent} isSmallWindow={getWindowSizeInfo().isSmallWindow} />
       )}
       <NavBar getWindowSizeInfo={getWindowSizeInfo} />

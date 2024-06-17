@@ -7,7 +7,8 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
 interface CookieConsentProps {
-    giveCookieConsent: () => void;
+    // giveCookieConsent: () => void;
+    giveCookieConsent: (accepted: boolean) => void;
     isSmallWindow: boolean;
 }
 
@@ -18,12 +19,17 @@ const CookieConsent = ({ giveCookieConsent, isSmallWindow }: CookieConsentProps)
     const [open, setOpen] = React.useState(true);
     const privacyPolicyLink = '/' + lang + '/' + 'privacy-policy';
 
-    const handleClose = (answer: string) => {
-        if (answer === t('CookieAgree')) {
-            giveCookieConsent();
-        }
+    // const handleClose = (answer: string) => {
+    //     if (answer === t('CookieAgree')) {
+    //         giveCookieConsent();
+    //     }
+    //     setOpen(false);
+    // };
+
+    const handleClose = (answer: boolean) => {
+        giveCookieConsent(answer);
         setOpen(false);
-    };
+      };
 
     return ( 
         <Dialog 
@@ -56,7 +62,8 @@ const CookieConsent = ({ giveCookieConsent, isSmallWindow }: CookieConsentProps)
             </DialogContent>
             <DialogActions>
                 <Button 
-                    onClick={() => { handleClose(t('CookieDisagree')) }} 
+                    // onClick={() => { handleClose(t('CookieDisagree')) }} 
+                    onClick={() => { handleClose(false) }} 
                     sx={{
                         backgroundColor: theme.palette.secondary.main,
                     }}
@@ -65,7 +72,8 @@ const CookieConsent = ({ giveCookieConsent, isSmallWindow }: CookieConsentProps)
                     { t('CookieDisagree') }
                 </Button>
                 <Button 
-                    onClick={() => { handleClose(t('CookieAgree')) }} 
+                    // onClick={() => { handleClose(t('CookieAgree')) }}
+                    onClick={() => { handleClose(true) }} 
                     sx={{
                         backgroundColor: theme.palette.secondary.main,
                     }}
