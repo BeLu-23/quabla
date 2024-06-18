@@ -22,17 +22,6 @@ const HomeScreen = () => {
   const aboutUsPic = 'https://github.com/BeLu-23/quablaBandImages/blob/master/aboutUsPic.jpg?raw=true';
   const contactPic = 'https://github.com/BeLu-23/quablaBandImages/blob/master/kontaktPic2-compressed.jpg?raw=true';
 
-  // const gigsPic= "/ssf_2024_1.png";
-  // const recordingsPic = "/albumPic.jpg";
-  // const aboutUsPic = "/aboutUsPic.jpg";
-  // const contactPic = "/kontaktPic2-compressed.jpg";
-  
-
-
-  // const giveCookieConsent = () => {
-  //   setCookies("cookieConsent", true, {path: "/"});
-  // }
-
   const giveCookieConsent = (accepted: boolean) => {
     setCookies("cookieConsent", accepted, { path: "/" });
   };

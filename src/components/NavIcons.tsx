@@ -20,7 +20,6 @@ const NavIcons = ({
   isSmallWindow 
 }: NavIconsProps) => {
 
-  // const iconStyle = { fontSize: "20px" };
   const iconFontSize = fontSize ? fontSize : "medium";
   const navIconsStyle = { 
     flexGrow: flexGrow,
@@ -37,15 +36,6 @@ const NavIcons = ({
         ...navIconsStyle,
       }}
     >
-      {/* <IconButton
-        size="large"
-        color="inherit"
-        aria-label={ariaLabels.facebook}
-        href="https://www.facebook.com/quablaband"
-        target="_blank"
-      >
-        <Facebook fontSize={iconFontSize} />
-      </IconButton> */}
       <IconButton
         size="large"
         color="inherit"

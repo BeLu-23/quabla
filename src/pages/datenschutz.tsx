@@ -6,6 +6,7 @@ const Datenschutz = () => {
     const containerRef = useRef<HTMLDivElement | null>(null);
     const { t } = useTranslation();
 
+
     useEffect(() => {
         if (containerRef.current) {
             containerRef.current.focus();
@@ -102,7 +103,7 @@ const Datenschutz = () => {
                 </Typography>
                 <Typography variant="body1" paragraph>
                     {t('datenschutz24')}
-                    <a href="https://policies.google.com/privacy?hl=de">{t('datenschutz25')}</a>.
+                    <a href={t('datenschutz25')}>{t('datenschutz25')}</a>.
                 </Typography>
             </Box>
 
@@ -112,6 +113,15 @@ const Datenschutz = () => {
                 </Typography>
                 <Typography variant="body1" paragraph>
                     {t('datenschutz27')}
+                </Typography>
+            </Box>
+
+            <Box mb={4}>
+                <Typography variant="h5" component="h2" gutterBottom>
+                    {t('datenschutz28')}
+                </Typography>
+                <Typography variant="body1" paragraph>
+                    {t('datenschutz29')}
                 </Typography>
             </Box>
         </Container>

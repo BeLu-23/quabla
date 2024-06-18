@@ -7,7 +7,6 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslation } from "react-i18next";
 
 interface CookieConsentProps {
-    // giveCookieConsent: () => void;
     giveCookieConsent: (accepted: boolean) => void;
     isSmallWindow: boolean;
 }
@@ -18,13 +17,6 @@ const CookieConsent = ({ giveCookieConsent, isSmallWindow }: CookieConsentProps)
     const { lang } = useParams<{ lang: string }>();
     const [open, setOpen] = React.useState(true);
     const privacyPolicyLink = '/' + lang + '/' + 'privacy-policy';
-
-    // const handleClose = (answer: string) => {
-    //     if (answer === t('CookieAgree')) {
-    //         giveCookieConsent();
-    //     }
-    //     setOpen(false);
-    // };
 
     const handleClose = (answer: boolean) => {
         giveCookieConsent(answer);
